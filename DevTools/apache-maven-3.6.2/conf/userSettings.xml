@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <localRepository>C:\PROJETO-INTEGRADOR-III\DevMavenRepositories</localRepository>
+
+    <mirrors>
+        <mirror>
+            <id>google-maven-central</id>
+            <name>GCS Maven Central mirror</name>
+            <url>https://maven-central.storage-download.googleapis.com/repos/central/data/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+    </mirrors>
+
+    <profiles>
+        <profile>
+            <id>dev-local</id>
+            <repositories>
+			    <repository>
+                    <id>central</id>
+                    <url>http://repo1.maven.org/maven2</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+                <repository>
+                    <id>google</id>
+                    <name>google</name>
+                    <url>https://maven.google.com</url>
+                    <layout>default</layout>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>Central</id>
+                    <url>http://repo1.maven.org/maven2</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>dev-local</activeProfile>
+    </activeProfiles>
+</settings>

@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:13:12 BRST 2019
+jcl-over-slf4j-1.7.24-sources.jar>google-maven-central=
+jcl-over-slf4j-1.7.24.pom>google-maven-central=
+jcl-over-slf4j-1.7.24.jar>google-maven-central=

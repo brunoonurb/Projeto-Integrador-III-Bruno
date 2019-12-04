@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="bootstrap-4.1.3-dist/css/font-awesome.min.css" rel="stylesheet">
+<link href="bootstrap-4.1.3-dist/css/bootstrap.css" rel="stylesheet">
+
+
+    <title>todos os Ticket</title>
+</head>
+<body>
+
+
+
+<div class="container main-container">
+<div class="row">
+    <div class="col-lg-0" style="height:100px;margin-right:">
+        <!-- latera paara o alinhamento -->
+    </div>
+    <div class="col-lg-12 bg-secondary">
+        <!--topo principal supeior -->
+    </div>
+</div>
+</div>
+<div class="container mb-4 main-container">
+    <div class="row">
+        <div class="col-lg-3 pb-5 bg-secondary" >
+            <!-- Account Sidebar-->
+            <div class="author-card pb-3">
+              
+              <!--
+                <div class="author-card-cover" style="background-image: url(https://demo.createx.studio/createx-html/img/widgets/author/cover.jpg);"><a class="btn btn-style-1 btn-white btn-sm" href="#" data-toggle="tooltip" title="" data-original-title="You currently have 290 Reward points to spend"><i class="fa fa-award text-md"></i>&nbsp;290 points</a>
+                </div>
+            -->
+            <!--foto perfil-->
+                <div class="author-card-profile">
+                    <div class="author-card-avatar"><img src="images/fotoPerfil.jpg" width="100%" height="100%" alt="bruno pedroso">  
+                    </div>
+                    <div class="author-card-details">
+                        <h5 class="author-card-name text-lg">Bruno Pedroso</h5><span class="author-card-position">Ingressou fevereiro 06, 2019</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="wizard">
+                <nav class="list-group list-group-flush">
+                    <a class="list-group-item " href="" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><i class="fa fa-shopping-bag mr-1 text-muted"></i>
+                                <div class="d-inline-block ">
+                                    Novo Ticket
+                                </div>
+                            </div><span class="badge badge-secondary">+</span>
+                        </div>
+                    </a>
+                    <a class="list-group-item" href="Perfil.html"><i class="fa fa-user text-muted"></i>Perfil</a><a class="list-group-item" href="#"><i class="fa fa-map-marker text-muted"></i>espaco vazio</a>
+                    <a class="list-group-item active" href="">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><i class="fa fa-heart mr-1 text-muted"></i>
+                                <div class="d-inline-block">Listar de todos os Tickets</div>
+                            </div><span class="badge badge-secondary">12</span>
+                        </div>
+                    </a>
+                    <a class="list-group-item" href="TicketsResolvidos.html">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div><i class="fa fa-tag mr-1 text-muted"></i>
+                                <div class="d-inline-block font-weight-medium ">Tickets Resolvidos</div>
+                            </div><span class="badge badge-secondary">4</span>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <!-- Orders Table-->
+        <div class="col-lg-9 pb-5">
+            <div class="d-flex justify-content-end pb-3">
+                <div class="form-inline">
+                    <label class="text-muted mr-3" for="order-sort">Ordenar Tickets</label>
+                    <select class="form-control" id="order-sort">
+                       <option>Todos</option>
+                        <option>Pendente</option>
+                        <option>Em processo</option>
+                        <option>resolvido</option>
+                    </select>
+                </div>
+            </div>
+            <h3 class="text-center">Todos os Tickets</h3>
+            <div class="table-responsive">
+                <table class="table table-hover mb-0 ">
+                    <thead>
+                        <tr>
+                            <th>Protocolo </th>
+                            <th>Data</th>
+                            <th>Status</th>
+                            <th>Titulo</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-warning ">
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal" data-target="#ticket">78A643CD409</a></td>
+                            <td>Agosto 08, 2019</td>
+                            <td><span class="badge badge-warning m-0">Pendente</span></td>
+                            <td><span>Nao abrindo software </span></td>
+                            <td><button type="button" class="btn btn-success">Finalizar</button></td>
+                        </tr>
+                        <tr class="table-info ">
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal" data-target="#ticket">34VB5540K83</a></td>
+                            <td>julho 21, 2019</td>
+                            <td><span class="badge badge-info m-0">Em Processo</span></td>
+                            <td>Nao enviando</td>
+                            <td><button type="button" class="btn btn-success">Finalizar</button></td>
+                        </tr>
+                        <tr class="table-warning">
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal" data-target="#ticket">112P45A90V2</a></td>
+                            <td>junho 15, 2019</td>
+                            <td><span class="badge badge-warning m-0">Pendente</span></td>
+                            <td>Falta de informacção</td>
+							 <td><button type="button" class="btn btn-success">Finalizar</button></td>
+                        </tr>
+                        <tr class="table-success">
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">28BA67U0981</a></td>
+                            <td>maio 19, 2019</td>
+                            <td><span class="badge badge-success m-0">Resolvido</span></td>
+                            <td>Erro de cadasdastro</td>
+							 <td><button type="button" class="btn btn-danger">Reabrir</button></td>
+                        </tr>
+                        <tr class="table-info">
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">502TR872W2</a></td>
+                            <td>abril 04, 2019</td>
+                            <td><span class="badge badge-info m-0">Em Processo</span></td>
+                            <td>travando </td>
+							 <td><button type="button" class="btn btn-success">Finalizar</button></td>
+                        </tr>
+                        <tr class="table-warning">
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">47H76G09F33</a></td>
+                            <td>março 30, 2019</td>
+                            <td><span class="badge badge-warning m-0">Pendente</span></td>
+                            <td>erro gerar nota </td>
+							 <td><button type="button" class="btn btn-success">Finalizar</button></td>
+                        </tr>
+
+
+                         <tr class="table-success">
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">47H76G09F33</a></td>
+                            <td>março 30, 2019</td>
+                            <td><span class="badge badge-success m-0">Resolvido</span></td>
+                            <td>informacao incorreta</td>
+							 <td><button type="button" class="btn btn-danger">Reabrir</button></td>
+                        </tr> 
+                         <tr class="table-warning">
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">47H76G09F33</a></td>
+                            <td>março 30, 2019</td>
+                            <td><span class="badge badge-warning m-0">Pendente</span></td>
+                            <td>nao atualiza sitema</td>
+							 <td><button type="button" class="btn btn-success">Finalizar</button></td>
+                        </tr> 
+                         <tr class="table-info">
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">47H76G09F33</a></td>
+                            <td>março 30, 2019</td>
+                            <td><span class="badge badge-info m-0">Em Processo</span></td>
+                            <td>nao add foto</td>
+							 <td><button type="button" class="btn btn-success">Finalizar</button></td>
+                        </tr> 
+                          <tr class="table-success">
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">47H76G09F33</a></td>
+                            <td>março 30, 2019</td>
+                            <td><span class="badge badge-success m-0">Resolvido</span></td>
+                            <td>o</td>
+							 <td><button type="button" class="btn btn-danger">Reabrir</button></td>
+                        </tr> 
+                        <tr class="table-warning">
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal">47H76G09F33</a></td>
+                            <td>março 30, 2019</td>
+                            <td><span class="badge badge-warning m-0">Pendente</span></td>
+                            <td>sistema não entra</td>
+							 <td><button type="button" class="btn btn-success">Finalizar</button></td>
+                        </tr>
+                         <tr class="table-success">
+                            <td><a class="navi-link" href="#order-details" data-toggle="modal" data-target="#ticket" data-whatever="Resolvido">47H76G09F33</a></td>
+                            <td>março 30, 2019</td>
+                            <td><span class="badge badge-success m-0">Resolvido</span></td>
+                            <td>problema inas mensagem</td>
+							 <td><button type="button" class="btn btn-danger     ">Reabrir</button></td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- modal novo ticket-->
+
+
+
+
+<div class="modal fade bd-example-modal-lg-8" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg-8" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Novo ticket</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="titulo-name" class="col-form-label">Titulo:</label>
+            <input type="text" class="form-control" id="titulo-name" maxlength="20" required="noa foi possivel">
+          </div>
+          <div class="form-group">
+            <label for="Descrição-text" class="col-form-label">Descrição:</label>
+            <textarea class="form-control" id="Descrição-text" height="500px"></textarea>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary" data-dismiss="modal">Enviar</button>
+      </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal grande -->
+<div class="modal fade bd-example-modal-lg" id="ticket" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Titulo do ticket</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+          <ul class="comment-section">
+      <div class="row justify-content-center">
+          
+          <div class="row col-md-10">
+            <li class="comment user-comment">
+
+                <div class="info">
+                    <a href="#">Bruno Pedroso </a>
+                    <span>4 hours ago</span>
+                </div>
+
+                <a class="avatar" href="#">
+                    <img src="images/avatar_author.jpg" width="35" alt="Profile Avatar" title="Anie Silverston" />
+                </a>
+
+                <p class="font-weight-bold">Estava tentando ligar meu computador mas nao estou consegindo ja instalei tudo que consegui mas nao posso fazer mais nada nao tenho nem ideia oque podera ser entao to oque tentei nao deu resultado</p>
+
+            </li>
+           </div>
+            
+          </div>
+          <hr class="border-20">
+
+            <li class="comment user-comment">
+
+                <div class="info">
+                    <a href="#">Surporte Tecnico</a>
+                    <span>4 hours ago</span>
+                </div>
+
+                <a class="avatar" href="#">
+                    <img src="images/avatarD.jpg" width="35" alt="Profile Avatar" title="Anie Silverston" />
+                </a>
+
+                <p>Suspendisse gravida sem?</p>
+
+            </li>
+
+            <li class="comment author-comment">
+
+                <div class="info">
+                    <a href="#">Bruno Pedroso</a>
+                    <span>3 hours ago</span>
+                </div>
+
+                <a class="avatar" href="#">
+                    <img src="images/avatar_author.jpg" width="35" alt="Profile Avatar" title="Jack Smith" />
+                </a>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse gravida sem sit amet molestie portitor.</p>
+
+            </li>
+
+            <li class="comment user-comment">
+
+                <div class="info">
+                    <a href="#">Surporte Tecnico</a>
+                    <span>1 hour ago</span>
+                </div>
+
+                <a class="avatar" href="#">
+                    <img src="images/avatarD.jpg" width="35" alt="Profile Avatar" title="Bradley Jones" />
+                </a>
+
+                <p>Suspendisse gravida sem sit amet molestie portitor?</p>
+
+            </li>
+            <li class="comment author-comment">
+
+                <div class="info">
+                    <a href="#">Bruno Pedroso</a>
+                    <span>1 hour ago</span>
+                </div>
+                <a class="avatar" href="#">
+                    <img src="images/avatar_author.jpg" width="35" alt="Profile Avatar" title="Jack Smith" />
+                </a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisee gravida sem sit amet molestie porttitor?.</p>
+            </li>
+        </ul>
+      <form action="#" method="post">
+                <div class="form-group">
+                     <label for="Descrição-text" class="col-form-label"><b>Responder:<b></label>
+                      <textarea class="form-control" placeholder="Digite sua resposta"  id="resposta" height="500px"></textarea>
+                      <img src="images/avatar_author.jpg" width="35" alt="Profile of Bradley Jones" title="Bradley Jones" />
+                        <button type="submit">Enviar</button>
+                    </div>
+             </form>
+      </div>
+     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

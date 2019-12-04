@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:13:08 BRST 2019
+disruptor-3.3.0-sources.jar>google-maven-central=
+disruptor-3.3.0.pom>google-maven-central=
+disruptor-3.3.0.jar>google-maven-central=

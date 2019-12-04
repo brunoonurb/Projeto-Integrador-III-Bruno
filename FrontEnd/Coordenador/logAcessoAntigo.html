@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Issue Tracker</title>
+
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- bootstrap theme -->
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<!-- font icon -->
+	<link href="css/elegant-icons-style.css" rel="stylesheet" />
+	<link href="css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="css/fullcalendar.css">
+	<link href="css/widgets.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style-responsive.css" rel="stylesheet" />
+	<link href="css/xcharts.min.css" rel=" stylesheet">
+	<link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+	<!-- container section start -->
+	<section id="container" class="">
+
+
+		<header class="header dark-bg">
+
+
+			<!--logo start-->
+			<a href="index.html" class="logo">Issue <span class="lite">Tracker</span></a>
+			<!--logo end-->
+
+			<div class="nav search-row" id="top_menu">
+				<!--  search form start -->
+				<ul class="nav top-menu">
+					<li>
+						<form class="navbar-form">
+							<input class="form-control" placeholder="Pesquisar" type="text">
+						</form>
+					</li>
+				</ul>
+				<!--  search form end -->
+			</div>
+
+			<div class="top-nav notification-row">
+
+				<ul class="nav pull-right top-menu">
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<span class="profile-ava">
+								<img alt="" src="img/avatar-mini2.jpg">
+							</span>
+							<span class="username">Coordenador</span>
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu extended logout">
+							<div class="log-arrow-up"></div>
+							<li class="eborder-top">
+								<a href="#"><i class="icon_profile"></i> Meu perfil</a>
+							</li>
+							<li>
+								<a href="#"><i class="icon_key_alt"></i> Sair</a>
+							</li>
+						</ul>
+					</li>
+					<!-- user login dropdown end -->
+				</ul>
+				<!-- notificatoin dropdown end-->
+			</div>
+		</header>
+		<!--header end-->
+
+		<!--main content start-->
+		<section id="main">
+			<section class="wrapper">
+				<!--overview start-->
+				<div class="row">
+					<div class="col-lg-12">
+						<ol class="breadcrumb">
+							<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+
+						</ol>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+
+							<a href="logAcesso.html">
+								<div class="info-box green-bg">
+									<i class="fa fa-eye" aria-hidden="true"></i>
+									<div class="count">140</div>
+									<div class="title">Logs de Acesso</div>
+								</div>
+							</a>
+
+
+							<a href="relatorioClientes.html">
+								<div class="info-box brown-bg">
+									<i class="fa fa-bars"></i>
+
+									<div class="count">1</div>
+									<div class="title">Relatorio de Tickets (Clientes)</div>
+								</div>
+							</a>
+							<!--/.info-box-->
+							<!--/.col-->
+
+							<a href="relatorioTecnicos.html">
+								<div class="info-box dark-bg">
+									<i class="fa fa-bars"></i>
+									<div class="count">362</div>
+									<div class="title">Relatorio de Tecnicos</div>
+								</div>
+							</a>
+							<!--/.info-box-->
+							<!--/.col-->
+
+							<a href="relatorioSupervisores.html">
+								<div class="info-box teal-bg">
+									<i class="fa fa-bars"></i>
+									<div class="count">1.426</div>
+									<div class="title">Relatorio de Supervisores</div>
+								</div>
+							</a>
+							<a href="relatorioCoordenador.html">
+								<div class="info-box blue-bg">
+									<i class="fa fa-bars"></i>
+									<div class="count">1.426</div>
+									<div class="title">Relatorio de Coordenadores</div>
+								</div>
+							</a>
+						</div>
+					</div><!--Termina o menu-->
+
+
+
+					<div class="col-md-9">
+						<div id="teste" class="col-md-12" style="background-color:white;">
+							<h2><i class="fa fa-eye"></i> Logs de Acesso</h2>
+
+							<table class="table table-responsive">
+								<thead class="green-bg" >
+									<tr  ><!--BOOTSTRAP NÃO ESTA PEGANDO AQUI NA TABLE TOTALMENTE-->
+										<th class="text-center" style="color:white;">Registro</th>
+										<th class="text-center" style="color:white;">Data</th>
+										<th class="text-center" style="color:white;">Hora</th>
+										<th class="text-center" style="color:white;">Acao</th>
+										<th class="text-center" style="color:white;">Login attempt</th>
+										<th class="text-center" style="color:white;">Nivel</th>
+										<th class="text-center" style="color:white;">Usuario</th>
+										<th class="text-center" style="color:white;">Id</th>
+										
+									</tr>
+								</thead>
+								<tbody class="text-center">
+									<tr>
+										<td>#012546</td>
+										<td>27/08/2019</td>
+										<td>15:25</td>
+										<td>Login</td>
+										<td>3</td>
+										<td>Cliente</td>
+										<td><a href="">
+										Roberto Bonadine</a></td>
+										<td>5124</td>
+
+									</tr>
+									<tr>
+										<td>#012546</td>
+										<td>27/08/2019</td>
+										<td>15:25</td>
+										<td>Logout</td>
+										<td>3</td>
+										<td>Cliente</td>
+										<td>Roberto Bonadine</td>
+										<td>5124</td>
+										
+									</tr>
+									<tr>
+										<td>#012546</td>
+										<td>27/08/2019</td>
+										<td>15:25</td>
+										<td>Login</td>
+										<td>3</td>
+										<td>Cliente</td>
+										<td>Roberto Bonadine</td>
+										<td>5124</td>
+
+									</tr>
+									<tr>
+										<td>#012546</td>
+										<td>27/08/2019</td>
+										<td>15:25</td>
+										<td>Logout</td>
+										<td>3</td>
+										<td>Cliente</td>
+										<td>Roberto Bonadine</td>
+										<td>5124</td>
+
+
+									</tr>             
+								</tbody>
+							</table> 
+
+						</div>
+					</div>
+				</div>
+				<br>
+				<br>                    
+			</br>
+		</section>
+	</section>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>

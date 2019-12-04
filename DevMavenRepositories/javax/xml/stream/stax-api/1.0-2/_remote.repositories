@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:13:18 BRST 2019
+stax-api-1.0-2-sources.jar>google-maven-central=
+stax-api-1.0-2.pom>google-maven-central=
+stax-api-1.0-2.jar>google-maven-central=

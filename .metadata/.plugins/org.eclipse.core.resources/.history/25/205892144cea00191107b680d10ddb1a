@@ -1,0 +1,116 @@
+package controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import business.UsuarioBusinessService;
+import model.Usuario;
+
+/**
+ * Servlet implementation class UsuarioServlet
+ */
+@WebServlet("/UsuarioServlet")
+public class UsuarioServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private UsuarioBusinessService usuarioBusinessService = new UsuarioBusinessService();
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public UsuarioServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	String acao = "";
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		acao = request.getParameter("acao");
+
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		acao = request.getParameter("acao");
+
+		if ("loginUsuario".equalsIgnoreCase(acao)) {
+			String email = request.getParameter("email");
+			String senha = request.getParameter("senha");
+			Usuario usuario = new Usuario();
+
+			usuario = usuarioBusinessService.buscarUsuario(email, senha);
+
+			if (usuario != null) {
+				System.out.println("Senha = " + usuario.getSenha());
+				System.out.println("Nivel = " + usuario.getNivel());
+				//Atribuir sessao
+				if (usuario.getNivel() == 4) {
+					System.out.println("É um coordenador");
+				} else if (usuario.getNivel() == 3) {
+					System.out.println("É um supervisor");
+				} else if (usuario.getNivel() == 2) {
+					System.out.println("É um tecnico");
+				} else {
+					System.out.println("É um cliente");
+
+				}
+			} else {
+				System.out.println("estamos no cliente");
+				response.sendRedirect("/fapi-poo-web-issuetracker-maven/cliente/homeClente.jsp");
+			}
+		}
+
+		if ("cadastrarUsuario".equalsIgnoreCase(acao)) {
+			// System.out.println("Passou pelo cadastro usuario POST");
+
+			String nome = request.getParameter("nome");
+			String sobrenome = request.getParameter("sobrenome");
+			String email = request.getParameter("email");
+			String senha = request.getParameter("senha");
+			// LOGICA PROVISORIA PARA VERIFICAR NIVEIS
+			int nivel = 0;
+			if (senha.equalsIgnoreCase("coordenador")) {
+				nivel = 4;
+			} else if (senha.equalsIgnoreCase("supervisor")) {
+				nivel = 3;
+			} else if (senha.equalsIgnoreCase("tecnico")) {
+				nivel = 2;
+			} else {
+				nivel = 1;
+			}
+			int status = 1;
+			Usuario usuario = new Usuario();
+			usuario.setNome(nome);
+			usuario.setSobrenome(sobrenome);
+			usuario.setEmail(email);
+			usuario.setSenha(senha);
+			usuario.setNivel(nivel);
+			usuario.setStatus(status);
+			int resposta = usuarioBusinessService.cadastrarUsuario(usuario);
+			if (resposta == 1) {
+				response.sendRedirect("/fapi-poo-web-issuetracker-maven/usuario/sucesso/cadastroSucesso.html");
+			} else {
+				response.sendRedirect("/fapi-poo-web-issuetracker-maven/usuario//erro/cadastroErro.html");
+			}
+
+		}
+
+		// doGet(request, response);
+	}
+
+}

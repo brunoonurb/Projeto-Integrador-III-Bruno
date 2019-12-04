@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:13:33 BRST 2019
+connection-pool-2.3.33.pom>google-maven-central=
+connection-pool-2.3.33.jar>google-maven-central=
+connection-pool-2.3.33-sources.jar>google-maven-central=

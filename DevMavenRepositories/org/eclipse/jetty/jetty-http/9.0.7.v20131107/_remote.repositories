@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:13:40 BRST 2019
+jetty-http-9.0.7.v20131107.pom>google-maven-central=
+jetty-http-9.0.7.v20131107.jar>google-maven-central=
+jetty-http-9.0.7.v20131107-sources.jar>google-maven-central=

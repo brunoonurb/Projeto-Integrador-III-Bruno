@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:13:59 BRST 2019
+mule-module-json-3.9.0.pom>google-maven-central=
+mule-module-json-3.9.0.jar>google-maven-central=
+mule-module-json-3.9.0-sources.jar>google-maven-central=

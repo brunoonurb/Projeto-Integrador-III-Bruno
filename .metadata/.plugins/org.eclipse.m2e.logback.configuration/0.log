@@ -1,0 +1,147 @@
+2019-10-09 00:58:28,193 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-10-09 00:59:15,283 [Worker-2: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: br.edu.fapi:fapi-poo-web-issuetracker-maven:1.0.0-SNAPSHOT @ C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\pom.xml.
+2019-10-09 00:59:22,641 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 00:59:22,641 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 00:59:22,646 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 00:59:22,646 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 00:59:29,863 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 00:59:29,863 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 00:59:29,864 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 00:59:29,865 [Worker-5: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:02:02,224 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:02:02,225 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:02:02,226 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:02:02,226 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:13:04,053 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:13:04,054 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:13:04,055 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:13:04,056 [Worker-15: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:15:00,011 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:15:00,011 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:15:00,013 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:15:00,013 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:16:16,919 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:16:16,919 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:16:16,921 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:16:16,921 [Worker-18: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:17:07,146 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:17:07,147 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:17:07,149 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:17:07,149 [Worker-19: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:17:41,380 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:17:41,380 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:17:41,385 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:17:41,385 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:20:09,659 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:20:09,660 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:20:09,661 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:20:09,661 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:20:30,896 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:20:30,896 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:20:30,897 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:20:30,897 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:23:11,888 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:23:11,888 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:23:11,890 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:23:11,890 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:26:50,665 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:26:50,667 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:26:50,669 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:26:50,669 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:29:19,101 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:29:19,101 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:29:19,103 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:29:19,104 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:30:16,381 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:30:16,381 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:30:16,384 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:30:16,384 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:30:33,485 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:30:33,486 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:30:33,487 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:30:33,487 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:31:30,324 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:31:30,324 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:31:30,326 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:31:30,327 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:32:21,992 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:32:21,992 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:32:21,994 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:32:21,994 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:32:31,935 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:32:31,935 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:32:31,937 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:32:31,937 [Worker-22: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:33:41,907 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:33:41,907 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:33:41,910 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:33:41,910 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:34:46,854 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:34:46,854 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:34:46,855 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:34:46,855 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:35:05,043 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:35:05,043 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:35:05,046 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:35:05,046 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:35:22,207 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:35:22,207 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:35:22,209 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:35:22,209 [Worker-23: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:36:30,367 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:36:30,367 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:36:30,367 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:36:30,367 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:36:59,001 [Worker-23: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for fapi-poo-web-issuetracker-maven
+2019-10-09 01:36:59,218 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:36:59,218 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:36:59,219 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:36:59,220 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:36:59,220 [Worker-24: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of fapi-poo-web-issuetracker-maven
+2019-10-09 01:36:59,221 [Worker-24: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for fapi-poo-web-issuetracker-maven
+2019-10-09 01:36:59,233 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:37:32,474 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:37:32,474 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:37:32,475 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:37:32,475 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:38:12,613 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:38:12,613 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:38:12,613 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:38:12,613 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:39:16,295 [Worker-13: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for fapi-poo-web-issuetracker-maven
+2019-10-09 01:39:16,495 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:39:16,495 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:39:16,495 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:39:16,495 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:39:16,495 [Worker-21: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of fapi-poo-web-issuetracker-maven
+2019-10-09 01:39:16,495 [Worker-21: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for fapi-poo-web-issuetracker-maven
+2019-10-09 01:39:16,495 [Worker-21: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:42:17,709 [Worker-24: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: br.edu.fapi:fapi-poo-web-issuetracker-maven:1.0.0-SNAPSHOT @ C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\pom.xml.
+2019-10-09 01:42:19,786 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:42:19,786 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:42:19,788 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:42:19,788 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:46:17,525 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:46:17,525 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:46:17,525 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:46:17,525 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:46:28,280 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:46:28,280 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:46:28,280 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:46:28,280 [Worker-13: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:46:37,177 [Worker-27: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for fapi-poo-web-issuetracker-maven
+2019-10-09 01:46:37,393 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:46:37,393 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:46:37,393 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:46:37,393 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:46:37,393 [Worker-28: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of fapi-poo-web-issuetracker-maven
+2019-10-09 01:46:37,393 [Worker-28: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for fapi-poo-web-issuetracker-maven
+2019-10-09 01:46:37,393 [Worker-28: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:51:56,014 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:51:56,014 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:51:56,014 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:51:56,014 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources
+2019-10-09 01:52:14,833 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:52:14,833 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\main\resources
+2019-10-09 01:52:14,833 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-10-09 01:52:14,833 [Worker-31: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\PROJETO-INTEGRADOR-III\workspaceProjetoIntegrador3\fapi-poo-web-issuetracker-maven\src\test\resources

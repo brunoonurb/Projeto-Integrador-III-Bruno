@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<!-- console output -->
+		<Console name="Console" target="SYSTEM_OUT">
+
+			<PatternLayout
+				pattern="  ||| %-5level : %logger{36} ||| %d{' DATA:' dd-MM-yyyy ' - HORA:' HH:mm:ss} - %msg%n  " />
+		</Console>
+
+		<File name="FileAcesso" fileName="c:/logs/Acessologs.txt">
+			<PatternLayout
+				pattern="||| [%t]}  %-5level %logger{36} |||  %d{' DATA:' dd-MM-yyyy ' - HORA:' HH:mm:ss} - %msg%n" />
+		</File>
+
+		<File name="FileAcao" fileName="c:/logs/AcaoLogs.txt">
+			<PatternLayout
+				pattern="||| [%t]}  %-5level %logger{36} |||  %d{' DATA:' dd-MM-yyyy ' - HORA:' HH:mm:ss} - %msg%n" />
+		</File>
+
+	</Appenders>
+
+	<Loggers>
+		<logger name="Acesso" level="INFO" additivity="false">
+			<AppenderRef ref="FileAcesso" />
+			<AppenderRef ref="Console" />
+		</logger>
+		<logger name="Acao" level="INFO" additivity="false">
+			<AppenderRef ref="FileAcao" />
+			<AppenderRef ref="Console" />
+		</logger>
+		
+		<Root level="all">
+			<AppenderRef ref="Console" />
+		</Root>
+
+
+
+	</Loggers>
+</Configuration>

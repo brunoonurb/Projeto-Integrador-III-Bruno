@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:13:05 BRST 2019
+commons-lang3-3.6-sources.jar>google-maven-central=
+commons-lang3-3.6.pom>google-maven-central=
+commons-lang3-3.6.jar>google-maven-central=

@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:12:58 BRST 2019
+commons-beanutils-1.9.3-sources.jar>google-maven-central=
+commons-beanutils-1.9.3.pom>google-maven-central=
+commons-beanutils-1.9.3.jar>google-maven-central=

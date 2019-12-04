@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:13:34 BRST 2019
+grizzly-http-client-1.14-sources.jar>google-maven-central=
+grizzly-http-client-1.14.pom>google-maven-central=
+grizzly-http-client-1.14.jar>google-maven-central=

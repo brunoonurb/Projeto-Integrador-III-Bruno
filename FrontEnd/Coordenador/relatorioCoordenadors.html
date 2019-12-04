@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Issue Tracker</title>
+
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- bootstrap theme -->
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<!-- font icon -->
+	<link href="css/elegant-icons-style.css" rel="stylesheet" />
+	<link href="css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="css/fullcalendar.css">
+	<link href="css/widgets.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style-responsive.css" rel="stylesheet" />
+	<link href="css/xcharts.min.css" rel=" stylesheet">
+	<link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+	<!-- container section start -->
+	<section id="container" class="">
+
+
+		<header class="header dark-bg">
+
+
+			<!--logo start-->
+			<a href="index.html" class="logo">Issue <span class="lite">Tracker</span></a>
+			<!--logo end-->
+
+
+
+			<div class="top-nav notification-row">
+
+				<ul class="nav pull-right top-menu">
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<span class="profile-ava">
+								<img alt="" src="img/avatar-mini2.jpg">
+							</span>
+							<span class="username">Coordenador</span>
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu extended logout">
+							<div class="log-arrow-up"></div>
+							<li class="eborder-top">
+								<a href="#"><i class="icon_profile"></i> Meu perfil</a>
+							</li>
+							<li>
+								<a href="#"><i class="icon_key_alt"></i> Sair</a>
+							</li>
+						</ul>
+					</li>
+					<!-- user login dropdown end -->
+				</ul>
+				<!-- notificatoin dropdown end-->
+			</div>
+		</header>
+		<!--header end-->
+
+		<!--main content start-->
+		<section id="main">
+			<section class="wrapper">
+				<!--overview start-->
+				<div class="row">
+					<div class="col-lg-12">
+						<ol class="breadcrumb">
+							<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+
+						</ol>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+
+							<a href="logAcesso.html">
+								<div class="info-box green-bg">
+									<i class="fa fa-eye" aria-hidden="true"></i>
+									<div class="count">140</div>
+									<div class="title">Logs de Acesso</div>
+								</div>
+							</a>
+
+
+							<a href="relatorioClientes.html">
+								<div class="info-box brown-bg">
+									<i class="fa fa-bars"></i>
+
+									<div class="count">1</div>
+									<div class="title">Relatorio de Tickets (Clientes)</div>
+								</div>
+							</a>
+							<!--/.info-box-->
+							<!--/.col-->
+
+							<a href="relatorioTecnicos.html">
+								<div class="info-box dark-bg">
+									<i class="fa fa-bars"></i>
+									<div class="count">362</div>
+									<div class="title">Relatorio de Tecnicos</div>
+								</div>
+							</a>
+							<!--/.info-box-->
+							<!--/.col-->
+
+							<a href="relatorioSupervisores.html">
+								<div class="info-box teal-bg">
+									<i class="fa fa-bars"></i>
+									<div class="count">1.426</div>
+									<div class="title">Relatorio de Supervisores</div>
+								</div>
+							</a>
+							<a href="relatorioCoordenador.html">
+								<div class="info-box blue-bg">
+									<i class="fa fa-bars"></i>
+									<div class="count">1.426</div>
+									<div class="title">Relatorio de Coordenadores</div>
+								</div>
+							</a>
+						</div>
+					</div><!--Termina o menu-->
+					<div class="col-md-9">
+						<div id="teste" class="col-md-12" style="background-color:white;">
+							<h2><i class="fa fa-bars"></i> Relatorio de Coordenadores</h2>
+
+							<div class="panel-group " id="accordion">
+								<!-- AQUI COMECA A LINAH ATABELA -->
+								
+
+								<div >
+									<div ></div><!--Começa linha de registro-->
+									<div class="panel-heading ">
+										<h6 class="panel-title ">
+											<table class="table  blue-bg ">
+												<tr align="center">
+													<td class="col-md-2">Id</td>
+													<td class="col-md-8">Coordenador</td>
+													<td class="col-md-8">Rank de funcionalidades</td>
+												</tr>
+											</table>
+										</h6>
+									</div>
+								</div><!--Termina linha de registro-->
+
+
+
+								<div class="panel panel-blue-bg "><!--Começa linha de registro-->
+									<div class="panel-heading">
+										<h6 class="panel-title ">
+											<table class="table table-hover ">
+												<tr align="center">
+													<td class="col-md-2">#1474</td>
+													<td class="col-md-8">Fernando Marcondes</td>
+													<td class="col-md-2"> <button type="button" class="btn btn-success" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">Acessar</button></td>
+												</tr>
+											</table>
+										</h6>
+									</div>
+									<div id="collapse1" class=" panel-collapse collapse">
+										<div class="panel-body">
+
+											<div >
+												<div class="row">
+													<div class="col-xs-1">Editar ticket</div>
+													<div class="col-xs-11">
+														<div class="progress">
+															<div class="progress-bar blue-bg" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">10%</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-1">Login</div>
+													<div class="col-xs-11">
+														<div class="progress">
+															<div class="progress-bar teal-bg" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">15%</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-1">Listar tickets</div>
+													<div class="col-xs-11">
+														<div class="progress">
+															<div class="progress-bar orange-br" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">25%</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-1">Responder Ticket</div>
+													<div class="col-xs-11">
+														<div class="progress">
+															<div class="progress-bar lime-bg" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">50%</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!--Termina linha de registro-->
+
+								<div class="panel panel-blue-bg "><!--Começa linha de registro-->
+									<div class="panel-heading">
+										<h6 class="panel-title ">
+											<table class="table table-hover ">
+												<tr align="center">
+													<td class="col-md-2">#1474</td>
+													<td class="col-md-8">Fernando Marcondes</td>
+													<td class="col-md-2"> <button type="button" class="btn btn-success" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">Acessar</button></td>
+												</tr>
+											</table>
+										</h6>
+									</div>
+									<div id="collapse2" class="panel-collapse collapse">
+										<div class="panel-body">
+											Funcionalidades mais usadas
+										</div>
+									</div>
+								</div><!--Termina linha de registro-->
+
+								<div class="panel panel-blue-bg "><!--Começa linha de registro-->
+									<div class="panel-heading">
+										<h6 class="panel-title ">
+											<table class="table table-hover ">
+												<tr align="center">
+													<td class="col-md-2">#1474</td>
+													<td class="col-md-8">Fernando Marcondes</td>
+													<td class="col-md-2"> <button type="button" class="btn btn-success" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">Acessar</button></td>
+												</tr>
+											</table>
+										</h6>
+									</div>
+									<div id="collapse3" class="panel-collapse collapse">
+										<div class="panel-body">
+											Funcionalidades mais usadas
+										</div>
+									</div>
+								</div><!--Termina linha de registro-->
+
+							</div><!--Termina o accordion-->
+
+						</div>
+					</div>
+					<br>
+					<br>                    
+				</br>
+			</section>
+		</section>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>

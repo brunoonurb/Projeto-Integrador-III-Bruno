@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:14:01 BRST 2019
+spring-context-4.1.9.RELEASE.pom>google-maven-central=
+spring-context-4.1.9.RELEASE.jar>google-maven-central=
+spring-context-4.1.9.RELEASE-sources.jar>google-maven-central=

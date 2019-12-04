@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Issue Tracker</title>
+
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- bootstrap theme -->
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<!-- font icon -->
+	<link href="css/elegant-icons-style.css" rel="stylesheet" />
+	<link href="css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="css/fullcalendar.css">
+	<link href="css/widgets.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style-responsive.css" rel="stylesheet" />
+	<link href="css/xcharts.min.css" rel=" stylesheet">
+	<link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+	<!-- container section start -->
+	<section id="container" class="">
+
+
+		<header class="header dark-bg">
+
+
+			<!--logo start-->
+			<a href="index.html" class="logo">Issue <span class="lite">Tracker</span></a>
+			<!--logo end-->
+
+			<div class="nav search-row" id="top_menu">
+				<!--  search form start -->
+				<ul class="nav top-menu">
+					<li>
+						<form class="navbar-form">
+							<input class="form-control" placeholder="Pesquisar" type="text">
+						</form>
+					</li>
+				</ul>
+				<!--  search form end -->
+			</div>
+
+			<div class="top-nav notification-row">
+
+				<ul class="nav pull-right top-menu">
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<span class="profile-ava">
+								<img alt="" src="img/avatar-mini2.jpg">
+							</span>
+							<span class="username">Coordenador</span>
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu extended logout">
+							<div class="log-arrow-up"></div>
+							<li class="eborder-top">
+								<a href="#"><i class="icon_profile"></i> Meu perfil</a>
+							</li>
+							<li>
+								<a href="#"><i class="icon_key_alt"></i> Sair</a>
+							</li>
+						</ul>
+					</li>
+					<!-- user login dropdown end -->
+				</ul>
+				<!-- notificatoin dropdown end-->
+			</div>
+		</header>
+		<!--header end-->
+
+		<!--main content start-->
+		<section id="main">
+			<section class="wrapper">
+				<!--overview start-->
+				<div class="row">
+					<div class="col-lg-12">
+						<ol class="breadcrumb">
+							<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+
+						</ol>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+
+							<a href="logAcesso.html">
+								<div class="info-box green-bg">
+									<i class="fa fa-eye" aria-hidden="true"></i>
+									<div class="count">140</div>
+									<div class="title">Logs de Acesso</div>
+								</div>
+							</a>
+
+
+							<a href="relatorioClientes.html">
+								<div class="info-box brown-bg">
+									<i class="fa fa-bars"></i>
+
+									<div class="count">1</div>
+									<div class="title">Relatorio de Tickets (Clientes)</div>
+								</div>
+							</a>
+							<!--/.info-box-->
+							<!--/.col-->
+
+							<a href="relatorioTecnicos.html">
+								<div class="info-box dark-bg">
+									<i class="fa fa-bars"></i>
+									<div class="count">362</div>
+									<div class="title">Relatorio de Tecnicos</div>
+								</div>
+							</a>
+							<!--/.info-box-->
+							<!--/.col-->
+
+							<a href="relatorioSupervisores.html">
+								<div class="info-box teal-bg">
+									<i class="fa fa-bars"></i>
+									<div class="count">1.426</div>
+									<div class="title">Relatorio de Supervisores</div>
+								</div>
+							</a>
+							<a href="relatorioCoordenador.html">
+								<div class="info-box blue-bg">
+									<i class="fa fa-bars"></i>
+									<div class="count">1.426</div>
+									<div class="title">Relatorio de Coordenadores</div>
+								</div>
+							</a>
+						</div>
+					</div><!--Termina o menu-->
+
+
+
+					<div class="col-md-9">
+						<div id="teste" class="col-md-12" style="background-color:white;">
+							<h2><i class="fa fa-eye"></i> Relatorio de Clientes</h2>
+
+
+
+
+							<table class="table table-responsive">
+								<thead class="green-bg" >
+								<tr  ><!--BOOTSTRAP NÃO ESTA PEGANDO AQUI NA TABLE TOTALMENTE-->
+									<th class="col-md-1 text-right" style="color:white;">Protocolo</th>
+									<th class="col-md-2 text-center" style="color:white;">Data</th>
+									<th class="col-md-1 text-left" style="color:white;">Cliente</th>
+									<th class="col-md-2 text-center" style="color:white;">Assunto</th>
+									<th class="col-md-1 text-right" style="color:white;">Situacao</th>
+									<th class="col-md-1 text-center" style="color:white;">Ticket time</th>
+									<th class="col-md-2 text-center" style="color:white;">tecnico</th>
+									<td class="col-md-1">Altera Tcnico</td>
+
+
+
+								</tr>
+								</thead>
+							</table>
+
+
+
+
+							<div class="panel-group " id="accordion">
+								<!-- AQUI COMECA A LINAH ATABELA -->
+								<div class="panel panel-yellow ">
+									<div class="panel-heading">
+										<h6 class="panel-title ">
+											<a data-toggle="collapse" data-parent="#accordion"
+											   href="#collapse4">
+
+												<table class="table table-hover mb-0 ">
+													<tr class="table">
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse0">#10</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse0">março 30, 2019</button></td>
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse0">Valéria taborda</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse0">problema nas mensagem</button></td>
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse0"><span class="badge yellow-bg m-0">Novo</span></button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse0">1'54"</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse0">...</button></td>
+														<td class="col-md-1"><button type="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapse01" class="btn btn-info "><i class="fa fa fa-gears" aria-hidden="true"></button></td>
+													</tr>
+
+												</table>
+
+										</h6>
+									</div>
+
+									<div id="collapse0" class="panel-collapse collapse">
+										<div class="panel-body">
+
+
+											<ul class="comment-section">
+												<div class="row justify-content-center">
+
+													<div class="row col-md-10 text-justify">
+														<li class="comment user-comment">
+
+															<div class="info">
+																<a href="#">Bruno Pedroso </a> <span>4 hours
+																			ago</span>
+															</div> <a class="avatar" href="#"> <img
+																src="../images/avatar_author.jpg" width="35"
+																alt="Profile Avatar" title="Anie Silverston" />
+														</a>
+
+															<h4 class="font-weight-bold">
+																<b>Estava tentando ligar meu computador mas nao
+																	estou consegindo ja instalei tudo que consegui mas
+																	nao posso fazer mais nada nao tenho nem ideia oque
+																	podera ser entao to oque tentei nao deu resultado</b>
+															</h4>
+
+														</li>
+													</div>
+
+												</div>
+												<hr class="border-20">
+
+												<li class="comment user-comment">
+
+													<div class="info">
+														<a href="#">Surporte Tecnico</a> <span>4 hours
+																	ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatarD.jpg" width="35" alt="Profile Avatar"
+														title="Anie Silverston" />
+												</a>
+
+													<p>Suspendisse gravida sem?</p>
+
+												</li>
+
+												<li class="comment author-comment">
+
+													<div class="info">
+														<a href="#">Bruno Pedroso</a> <span>3 hours ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatar_author.jpg" width="35"
+														alt="Profile Avatar" title="Jack Smith" />
+												</a>
+
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing
+														elit. Suspendisse gravida sem sit amet molestie
+														portitor.</p>
+
+												</li>
+
+												<li class="comment user-comment">
+
+													<div class="info">
+														<a href="#">Surporte Tecnico</a> <span>1 hour ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatarD.jpg" width="35" alt="Profile Avatar"
+														title="Bradley Jones" />
+												</a>
+
+													<p>Suspendisse gravida sem sit amet molestie
+														portitor?</p>
+
+												</li>
+												<li class="comment author-comment">
+
+													<div class="info">
+														<a href="#">Bruno Pedroso</a> <span>1 hour ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatar_author.jpg" width="35"
+														alt="Profile Avatar" title="Jack Smith" />
+												</a>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing
+														elit. Suspendisee gravida sem sit amet molestie
+														porttitor?.</p>
+												</li>
+											</ul>
+											<form action="#" method="post">
+												<div class="form-group">
+													<label for="Descricao-text" class="col-form-label"><b>Responder:<b></label>
+													<textarea class="form-control"
+															  placeholder="Digite sua resposta" id="resposta"
+															  height="500px"></textarea>
+													<img src="../images/avatar_author.jpg" width="35"
+														 alt="Profile of Bradley Jones" title="Bradley Jones" />
+													<button type="submit">Enviar</button>
+												</div>
+											</form>
+
+
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-9"></div>
+										<div class="col-md-3">
+
+											<div id="collapse01" class="panel-collapse collapse">
+												<div class="panel-body col-md-12 red-bg">
+													<div class="form-group">
+														<label for="exampleFormControlSelect2">Lista de tecnicos</label>
+														<select multiple class="form-control" id="exampleFormControlSelect2">
+															<option>Jose maria</option>
+															<option>Maria Lucia</option>
+															<option >Joao Alfredo</option>
+															<option>Lucas Machado</option>
+															<option>Robert Luisis</option>
+															<option>Antonio farias</option>
+														</select>
+													</div>
+
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+
+							<!-- AQUI COMECA A LINAH ATABELA -->
+							<div class="panel panel-success ">
+								<div class="panel-heading">
+									<h6 class="panel-title ">
+										<a data-toggle="collapse" data-parent="#accordion"
+										   href="#collapse4">
+
+											<table class="table table-hover mb-0 ">
+												<tr class="table">
+													<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse">#10</button></td>
+													<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse">março 30, 2019</button></td>
+													<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse">Valéria taborda</button></td>
+													<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse">problema nas mensagem</button></td>
+													<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse"><span class="badge bg-success m-0">Resolvido</span></button></td>
+													<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse">1'54"</button></td>
+													<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse">Joao Alfredo</button></td>
+													<td class="col-md-1"><button type="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapse8" class="btn btn-info "><i class="fa fa fa-gears" aria-hidden="true"></button></td>
+												</tr>
+
+											</table>
+
+									</h6>
+								</div>
+
+								<div id="collapse" class="panel-collapse collapse">
+									<div class="panel-body">
+
+
+										<ul class="comment-section">
+											<div class="row justify-content-center">
+
+												<div class="row col-md-10 text-justify">
+													<li class="comment user-comment">
+
+														<div class="info">
+															<a href="#">Bruno Pedroso </a> <span>4 hours
+																			ago</span>
+														</div> <a class="avatar" href="#"> <img
+															src="../images/avatar_author.jpg" width="35"
+															alt="Profile Avatar" title="Anie Silverston" />
+													</a>
+
+														<h4 class="font-weight-bold">
+															<b>Estava tentando ligar meu computador mas nao
+																estou consegindo ja instalei tudo que consegui mas
+																nao posso fazer mais nada nao tenho nem ideia oque
+																podera ser entao to oque tentei nao deu resultado</b>
+														</h4>
+
+													</li>
+												</div>
+
+											</div>
+											<hr class="border-20">
+
+											<li class="comment user-comment">
+
+												<div class="info">
+													<a href="#">Surporte Tecnico</a> <span>4 hours
+																	ago</span>
+												</div> <a class="avatar" href="#"> <img
+													src="../images/avatarD.jpg" width="35" alt="Profile Avatar"
+													title="Anie Silverston" />
+											</a>
+
+												<p>Suspendisse gravida sem?</p>
+
+											</li>
+
+											<li class="comment author-comment">
+
+												<div class="info">
+													<a href="#">Bruno Pedroso</a> <span>3 hours ago</span>
+												</div> <a class="avatar" href="#"> <img
+													src="../images/avatar_author.jpg" width="35"
+													alt="Profile Avatar" title="Jack Smith" />
+											</a>
+
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing
+													elit. Suspendisse gravida sem sit amet molestie
+													portitor.</p>
+
+											</li>
+
+											<li class="comment user-comment">
+
+												<div class="info">
+													<a href="#">Surporte Tecnico</a> <span>1 hour ago</span>
+												</div> <a class="avatar" href="#"> <img
+													src="../images/avatarD.jpg" width="35" alt="Profile Avatar"
+													title="Bradley Jones" />
+											</a>
+
+												<p>Suspendisse gravida sem sit amet molestie
+													portitor?</p>
+
+											</li>
+											<li class="comment author-comment">
+
+												<div class="info">
+													<a href="#">Bruno Pedroso</a> <span>1 hour ago</span>
+												</div> <a class="avatar" href="#"> <img
+													src="../images/avatar_author.jpg" width="35"
+													alt="Profile Avatar" title="Jack Smith" />
+											</a>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing
+													elit. Suspendisee gravida sem sit amet molestie
+													porttitor?.</p>
+											</li>
+										</ul>
+										<form action="#" method="post">
+											<div class="form-group">
+												<label for="Descricao-text" class="col-form-label"><b>Responder:<b></label>
+												<textarea class="form-control"
+														  placeholder="Digite sua resposta" id="resposta"
+														  height="500px"></textarea>
+												<img src="../images/avatar_author.jpg" width="35"
+													 alt="Profile of Bradley Jones" title="Bradley Jones" />
+												<button type="submit">Enviar</button>
+											</div>
+										</form>
+
+
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-9"></div>
+									<div class="col-md-3">
+
+								<div id="collapse8" class="panel-collapse collapse">
+									<div class="panel-body col-md-12 red-bg">
+										<div class="form-group">
+											<label for="exampleFormControlSelect2">Lista de tecnicos</label>
+											<select multiple class="form-control" id="exampleFormControlSelect2">
+												<option>Jose maria</option>
+												<option>Maria Lucia</option>
+												<option selected>Joao Alfredo</option>
+												<option>Lucas Machado</option>
+												<option>Robert Luisis</option>
+												<option>Antonio farias</option>
+											</select>
+										</div>
+
+
+									</div>
+								</div>
+
+									</div>
+								</div>
+
+							</div>
+
+								<!-- AQUI COMECA A LINAH ATABELA -->
+								<div class="panel panel-danger ">
+									<div class="panel-heading">
+										<h6 class="panel-title ">
+											<a data-toggle="collapse" data-parent="#accordion"
+											   href="#collapse4">
+
+												<table class="table table-hover mb-0 ">
+													<tr class="table">
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">#10</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">março 30, 2019</button></td>
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">Valéria taborda</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">problema nas mensagem</button></td>
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse3"><span class="badge red-bg m-0">Fechado</span></button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">1'54"</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">Joao Alfredo</button></td>
+														<td class="col-md-1"><button type="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapse31" class="btn btn-info "><i class="fa fa fa-gears" aria-hidden="true"></button></td>
+													</tr>
+
+												</table>
+
+										</h6>
+									</div>
+
+									<div id="collapse3" class="panel-collapse collapse">
+										<div class="panel-body">
+
+
+											<ul class="comment-section">
+												<div class="row justify-content-center">
+
+													<div class="row col-md-10 text-justify">
+														<li class="comment user-comment">
+
+															<div class="info">
+																<a href="#">Bruno Pedroso </a> <span>4 hours
+																			ago</span>
+															</div> <a class="avatar" href="#"> <img
+																src="../images/avatar_author.jpg" width="35"
+																alt="Profile Avatar" title="Anie Silverston" />
+														</a>
+
+															<h4 class="font-weight-bold">
+																<b>Estava tentando ligar meu computador mas nao
+																	estou consegindo ja instalei tudo que consegui mas
+																	nao posso fazer mais nada nao tenho nem ideia oque
+																	podera ser entao to oque tentei nao deu resultado</b>
+															</h4>
+
+														</li>
+													</div>
+
+												</div>
+												<hr class="border-20">
+
+												<li class="comment user-comment">
+
+													<div class="info">
+														<a href="#">Surporte Tecnico</a> <span>4 hours
+																	ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatarD.jpg" width="35" alt="Profile Avatar"
+														title="Anie Silverston" />
+												</a>
+
+													<p>Suspendisse gravida sem?</p>
+
+												</li>
+
+												<li class="comment author-comment">
+
+													<div class="info">
+														<a href="#">Bruno Pedroso</a> <span>3 hours ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatar_author.jpg" width="35"
+														alt="Profile Avatar" title="Jack Smith" />
+												</a>
+
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing
+														elit. Suspendisse gravida sem sit amet molestie
+														portitor.</p>
+
+												</li>
+
+												<li class="comment user-comment">
+
+													<div class="info">
+														<a href="#">Surporte Tecnico</a> <span>1 hour ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatarD.jpg" width="35" alt="Profile Avatar"
+														title="Bradley Jones" />
+												</a>
+
+													<p>Suspendisse gravida sem sit amet molestie
+														portitor?</p>
+
+												</li>
+												<li class="comment author-comment">
+
+													<div class="info">
+														<a href="#">Bruno Pedroso</a> <span>1 hour ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatar_author.jpg" width="35"
+														alt="Profile Avatar" title="Jack Smith" />
+												</a>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing
+														elit. Suspendisee gravida sem sit amet molestie
+														porttitor?.</p>
+												</li>
+											</ul>
+											<form action="#" method="post">
+												<div class="form-group">
+													<label for="Descricao-text" class="col-form-label"><b>Responder:<b></label>
+													<textarea class="form-control"
+															  placeholder="Digite sua resposta" id="resposta"
+															  height="500px"></textarea>
+													<img src="../images/avatar_author.jpg" width="35"
+														 alt="Profile of Bradley Jones" title="Bradley Jones" />
+													<button type="submit">Enviar</button>
+												</div>
+											</form>
+
+
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-9"></div>
+										<div class="col-md-3">
+
+											<div id="collapse31" class="panel-collapse collapse">
+												<div class="panel-body col-md-12 red-bg">
+													<div class="form-group">
+														<label for="exampleFormControlSelect2">Lista de tecnicos</label>
+														<select multiple class="form-control" id="exampleFormControlSelect2">
+															<option>Jose maria</option>
+															<option>Maria Lucia</option>
+															<option selected>Joao Alfredo</option>
+															<option>Lucas Machado</option>
+															<option>Robert Luisis</option>
+															<option>Antonio farias</option>
+														</select>
+													</div>
+
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+								<!-- AQUI COMECA A LINAH ATABELA -->
+								<div class="panel panel-warning ">
+									<div class="panel-heading">
+										<h6 class="panel-title ">
+											<a data-toggle="collapse" data-parent="#accordion"
+											   href="#collapse4">
+
+												<table class="table table-hover mb-0 ">
+													<tr class="table">
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">#10</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">março 30, 2019</button></td>
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">Valéria taborda</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">problema nas mensagem</button></td>
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse2"><span class="badge bg-warning m-0">Pendente</span></button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">1'54"</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">Joao Alfredo</button></td>
+														<td class="col-md-1"><button type="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapse21" class="btn btn-info "><i class="fa fa fa-gears" aria-hidden="true"></button></td>
+													</tr>
+
+												</table>
+
+										</h6>
+									</div>
+
+									<div id="collapse2" class="panel-collapse collapse">
+										<div class="panel-body">
+
+
+											<ul class="comment-section">
+												<div class="row justify-content-center">
+
+													<div class="row col-md-10 text-justify">
+														<li class="comment user-comment">
+
+															<div class="info">
+																<a href="#">Bruno Pedroso </a> <span>4 hours
+																			ago</span>
+															</div> <a class="avatar" href="#"> <img
+																src="../images/avatar_author.jpg" width="35"
+																alt="Profile Avatar" title="Anie Silverston" />
+														</a>
+
+															<h4 class="font-weight-bold">
+																<b>Estava tentando ligar meu computador mas nao
+																	estou consegindo ja instalei tudo que consegui mas
+																	nao posso fazer mais nada nao tenho nem ideia oque
+																	podera ser entao to oque tentei nao deu resultado</b>
+															</h4>
+
+														</li>
+													</div>
+
+												</div>
+												<hr class="border-20">
+
+												<li class="comment user-comment">
+
+													<div class="info">
+														<a href="#">Surporte Tecnico</a> <span>4 hours
+																	ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatarD.jpg" width="35" alt="Profile Avatar"
+														title="Anie Silverston" />
+												</a>
+
+													<p>Suspendisse gravida sem?</p>
+
+												</li>
+
+												<li class="comment author-comment">
+
+													<div class="info">
+														<a href="#">Bruno Pedroso</a> <span>3 hours ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatar_author.jpg" width="35"
+														alt="Profile Avatar" title="Jack Smith" />
+												</a>
+
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing
+														elit. Suspendisse gravida sem sit amet molestie
+														portitor.</p>
+
+												</li>
+
+												<li class="comment user-comment">
+
+													<div class="info">
+														<a href="#">Surporte Tecnico</a> <span>1 hour ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatarD.jpg" width="35" alt="Profile Avatar"
+														title="Bradley Jones" />
+												</a>
+
+													<p>Suspendisse gravida sem sit amet molestie
+														portitor?</p>
+
+												</li>
+												<li class="comment author-comment">
+
+													<div class="info">
+														<a href="#">Bruno Pedroso</a> <span>1 hour ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatar_author.jpg" width="35"
+														alt="Profile Avatar" title="Jack Smith" />
+												</a>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing
+														elit. Suspendisee gravida sem sit amet molestie
+														porttitor?.</p>
+												</li>
+											</ul>
+											<form action="#" method="post">
+												<div class="form-group">
+													<label for="Descricao-text" class="col-form-label"><b>Responder:<b></label>
+													<textarea class="form-control"
+															  placeholder="Digite sua resposta" id="resposta"
+															  height="500px"></textarea>
+													<img src="../images/avatar_author.jpg" width="35"
+														 alt="Profile of Bradley Jones" title="Bradley Jones" />
+													<button type="submit">Enviar</button>
+												</div>
+											</form>
+
+
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-9"></div>
+										<div class="col-md-3">
+
+											<div id="collapse21" class="panel-collapse collapse">
+												<div class="panel-body col-md-12 red-bg">
+													<div class="form-group">
+														<label for="exampleFormControlSelect2">Lista de tecnicos</label>
+														<select multiple class="form-control" id="exampleFormControlSelect2">
+															<option>Jose maria</option>
+															<option>Maria Lucia</option>
+															<option selected>Joao Alfredo</option>
+															<option>Lucas Machado</option>
+															<option>Robert Luisis</option>
+															<option>Antonio farias</option>
+														</select>
+													</div>
+
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+								<!-- AQUI COMECA A LINAH ATABELA -->
+								<div class="panel panel-info">
+									<div class="panel-heading">
+										<h6 class="panel-title ">
+											<a data-toggle="collapse" data-parent="#accordion"
+											   href="#collapse4">
+
+												<table class="table table-hover mb-0 ">
+													<tr class="table">
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse9">#10</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse9">março 30, 2019</button></td>
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse9">Valéria taborda</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse9">problema nas mensagem</button></td>
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse9"><span class="badge bg-info m-0">Em Processo</span></button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse9">1'54"</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse9">Joao Alfredo</button></td>
+														<td class="col-md-1"><button type="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapse6" class="btn btn-info "><i class="fa fa fa-gears" aria-hidden="true"></button></td>
+													</tr>
+
+												</table>
+
+										</h6>
+									</div>
+
+									<div id="collapse9" class="panel-collapse collapse">
+										<div class="panel-body">
+
+
+											<ul class="comment-section">
+												<div class="row justify-content-center">
+
+													<div class="row col-md-10 text-justify">
+														<li class="comment user-comment">
+
+															<div class="info">
+																<a href="#">Bruno Pedroso </a> <span>4 hours
+																			ago</span>
+															</div> <a class="avatar" href="#"> <img
+																src="../images/avatar_author.jpg" width="35"
+																alt="Profile Avatar" title="Anie Silverston" />
+														</a>
+
+															<h4 class="font-weight-bold">
+																<b>Estava tentando ligar meu computador mas nao
+																	estou consegindo ja instalei tudo que consegui mas
+																	nao posso fazer mais nada nao tenho nem ideia oque
+																	podera ser entao to oque tentei nao deu resultado</b>
+															</h4>
+
+														</li>
+													</div>
+
+												</div>
+												<hr class="border-20">
+
+												<li class="comment user-comment">
+
+													<div class="info">
+														<a href="#">Surporte Tecnico</a> <span>4 hours
+																	ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatarD.jpg" width="35" alt="Profile Avatar"
+														title="Anie Silverston" />
+												</a>
+
+													<p>Suspendisse gravida sem?</p>
+
+												</li>
+
+												<li class="comment author-comment">
+
+													<div class="info">
+														<a href="#">Bruno Pedroso</a> <span>3 hours ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatar_author.jpg" width="35"
+														alt="Profile Avatar" title="Jack Smith" />
+												</a>
+
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing
+														elit. Suspendisse gravida sem sit amet molestie
+														portitor.</p>
+
+												</li>
+
+												<li class="comment user-comment">
+
+													<div class="info">
+														<a href="#">Surporte Tecnico</a> <span>1 hour ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatarD.jpg" width="35" alt="Profile Avatar"
+														title="Bradley Jones" />
+												</a>
+
+													<p>Suspendisse gravida sem sit amet molestie
+														portitor?</p>
+
+												</li>
+												<li class="comment author-comment">
+
+													<div class="info">
+														<a href="#">Bruno Pedroso</a> <span>1 hour ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatar_author.jpg" width="35"
+														alt="Profile Avatar" title="Jack Smith" />
+												</a>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing
+														elit. Suspendisee gravida sem sit amet molestie
+														porttitor?.</p>
+												</li>
+											</ul>
+											<form action="#" method="post">
+												<div class="form-group">
+													<label for="Descricao-text" class="col-form-label"><b>Responder:<b></label>
+													<textarea class="form-control"
+															  placeholder="Digite sua resposta" id="resposta"
+															  height="500px"></textarea>
+													<img src="../images/avatar_author.jpg" width="35"
+														 alt="Profile of Bradley Jones" title="Bradley Jones" />
+													<button type="submit">Enviar</button>
+												</div>
+											</form>
+
+
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-9"></div>
+										<div class="col-md-3">
+
+											<div id="collapse6" class="panel-collapse collapse">
+												<div class="panel-body col-md-12 red-bg">
+													<div class="form-group">
+														<label for="exampleFormControlSelect2">Lista de tecnicos</label>
+														<select multiple class="form-control" id="exampleFormControlSelect2">
+															<option>Jose maria</option>
+															<option>Maria Lucia</option>
+															<option selected>Joao Alfredo</option>
+															<option>Lucas Machado</option>
+															<option>Robert Luisis</option>
+															<option>Antonio farias</option>
+														</select>
+													</div>
+
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+
+								<!-- AQUI COMECA A LINAH ATABELA -->
+								<div class="panel panel-warning ">
+									<div class="panel-heading">
+										<h6 class="panel-title ">
+											<a data-toggle="collapse" data-parent="#accordion"
+											   href="#collapse4">
+
+												<table class="table table-hover mb-0 ">
+													<tr class="table">
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse5">#10</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse5">março 30, 2019</button></td>
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse5">Valéria taborda</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse5">problema nas mensagem</button></td>
+														<td  class="col-md-1 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse5"><span class="badge dark-bg m-0">Reaberto</span></button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse5">1'54"</button></td>
+														<td  class="col-md-2 btn " data-toggle="collapse" data-parent="#accordion" data-target="#collapse5">Joao Alfredo</button></td>
+														<td class="col-md-1"><button type="button" data-toggle="collapse" data-parent="#accordion" data-target="#collapse51" class="btn btn-info "><i class="fa fa fa-gears" aria-hidden="true"></button></td>
+													</tr>
+
+												</table>
+
+										</h6>
+									</div>
+
+									<div id="collapse5" class="panel-collapse collapse">
+										<div class="panel-body">
+
+
+											<ul class="comment-section">
+												<div class="row justify-content-center">
+
+													<div class="row col-md-10 text-justify">
+														<li class="comment user-comment">
+
+															<div class="info">
+																<a href="#">Bruno Pedroso </a> <span>4 hours
+																			ago</span>
+															</div> <a class="avatar" href="#"> <img
+																src="../images/avatar_author.jpg" width="35"
+																alt="Profile Avatar" title="Anie Silverston" />
+														</a>
+
+															<h4 class="font-weight-bold">
+																<b>Estava tentando ligar meu computador mas nao
+																	estou consegindo ja instalei tudo que consegui mas
+																	nao posso fazer mais nada nao tenho nem ideia oque
+																	podera ser entao to oque tentei nao deu resultado</b>
+															</h4>
+
+														</li>
+													</div>
+
+												</div>
+												<hr class="border-20">
+
+												<li class="comment user-comment">
+
+													<div class="info">
+														<a href="#">Surporte Tecnico</a> <span>4 hours
+																	ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatarD.jpg" width="35" alt="Profile Avatar"
+														title="Anie Silverston" />
+												</a>
+
+													<p>Suspendisse gravida sem?</p>
+
+												</li>
+
+												<li class="comment author-comment">
+
+													<div class="info">
+														<a href="#">Bruno Pedroso</a> <span>3 hours ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatar_author.jpg" width="35"
+														alt="Profile Avatar" title="Jack Smith" />
+												</a>
+
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing
+														elit. Suspendisse gravida sem sit amet molestie
+														portitor.</p>
+
+												</li>
+
+												<li class="comment user-comment">
+
+													<div class="info">
+														<a href="#">Surporte Tecnico</a> <span>1 hour ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatarD.jpg" width="35" alt="Profile Avatar"
+														title="Bradley Jones" />
+												</a>
+
+													<p>Suspendisse gravida sem sit amet molestie
+														portitor?</p>
+
+												</li>
+												<li class="comment author-comment">
+
+													<div class="info">
+														<a href="#">Bruno Pedroso</a> <span>1 hour ago</span>
+													</div> <a class="avatar" href="#"> <img
+														src="../images/avatar_author.jpg" width="35"
+														alt="Profile Avatar" title="Jack Smith" />
+												</a>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing
+														elit. Suspendisee gravida sem sit amet molestie
+														porttitor?.</p>
+												</li>
+											</ul>
+											<form action="#" method="post">
+												<div class="form-group">
+													<label for="Descricao-text" class="col-form-label"><b>Responder:<b></label>
+													<textarea class="form-control"
+															  placeholder="Digite sua resposta" id="resposta"
+															  height="500px"></textarea>
+													<img src="../images/avatar_author.jpg" width="35"
+														 alt="Profile of Bradley Jones" title="Bradley Jones" />
+													<button type="submit">Enviar</button>
+												</div>
+											</form>
+
+
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-9"></div>
+										<div class="col-md-3">
+
+											<div id="collapse51" class="panel-collapse collapse">
+												<div class="panel-body col-md-12 red-bg">
+													<div class="form-group">
+														<label for="exampleFormControlSelect2">Lista de tecnicos</label>
+														<select multiple class="form-control" id="exampleFormControlSelect2">
+															<option>Jose maria</option>
+															<option>Maria Lucia</option>
+															<option selected>Joao Alfredo</option>
+															<option>Lucas Machado</option>
+															<option>Robert Luisis</option>
+															<option>Antonio farias</option>
+														</select>
+													</div>
+
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+
+
+
+
+
+							</div>
+
+
+
+
+
+
+
+						</div>
+					</div>
+
+				</div>
+				<br>
+				<br>                    
+			</br>
+		</section>
+	</section>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>

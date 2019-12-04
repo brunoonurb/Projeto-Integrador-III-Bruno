@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:14:37 BRST 2019
+jsp-api-2.2.1-b03.jar>google-maven-central=
+jsp-api-2.2.1-b03-sources.jar>google-maven-central=
+jsp-api-2.2.1-b03.pom>google-maven-central=

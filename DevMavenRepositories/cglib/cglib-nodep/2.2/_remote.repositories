@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:14:36 BRST 2019
+cglib-nodep-2.2-sources.jar>google-maven-central=
+cglib-nodep-2.2.pom>google-maven-central=
+cglib-nodep-2.2.jar>google-maven-central=

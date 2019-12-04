@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:14:31 BRST 2019
+mailapi-1.4.3.pom>google-maven-central=
+mailapi-1.4.3.jar>google-maven-central=
+mailapi-1.4.3-sources.jar>google-maven-central=

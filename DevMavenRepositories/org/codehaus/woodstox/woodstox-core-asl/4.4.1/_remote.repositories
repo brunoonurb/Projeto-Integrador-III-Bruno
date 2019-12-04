@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:14:10 BRST 2019
+woodstox-core-asl-4.4.1-sources.jar>google-maven-central=
+woodstox-core-asl-4.4.1.pom>google-maven-central=
+woodstox-core-asl-4.4.1.jar>google-maven-central=

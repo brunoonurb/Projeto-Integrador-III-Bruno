@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:13:47 BRST 2019
+geronimo-servlet_3.0_spec-1.0.jar>google-maven-central=
+geronimo-servlet_3.0_spec-1.0-sources.jar>google-maven-central=
+geronimo-servlet_3.0_spec-1.0.pom>google-maven-central=

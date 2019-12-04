@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:13:21 BRST 2019
+antlr-runtime-3.5.2.pom>google-maven-central=
+antlr-runtime-3.5.2.jar>google-maven-central=
+antlr-runtime-3.5.2-sources.jar>google-maven-central=

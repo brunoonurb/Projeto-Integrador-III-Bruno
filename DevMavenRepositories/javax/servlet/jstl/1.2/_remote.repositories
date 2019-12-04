@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:09:19 BRST 2019
+jstl-1.2-sources.jar>google-maven-central=
+jstl-1.2.pom>google-maven-central=
+jstl-1.2.jar>google-maven-central=

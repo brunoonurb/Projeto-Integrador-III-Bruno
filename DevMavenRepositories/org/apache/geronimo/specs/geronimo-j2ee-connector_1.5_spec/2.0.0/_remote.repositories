@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:13:07 BRST 2019
+geronimo-j2ee-connector_1.5_spec-2.0.0-sources.jar>google-maven-central=
+geronimo-j2ee-connector_1.5_spec-2.0.0.pom>google-maven-central=
+geronimo-j2ee-connector_1.5_spec-2.0.0.jar>google-maven-central=

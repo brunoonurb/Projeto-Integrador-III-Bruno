@@ -1,0 +1,149 @@
+/*para peggar os resolvidos*/
+
+
+select tickets.*,statusTickets.descricao as explicacao from tickets inner join statusTickets on tickets.status=statusTickets.id where tickets.idCliente = 5 having explicacao in('fechado','resolvido');
+
+/*pegar pendebnte*/
+
+select tickets.*,statusTickets.descricao as explicacao from tickets inner join statusTickets on tickets.status=statusTickets.id where tickets.idCliente = 5 having explicacao in('pendente','atribuido','em progresso','pendente c','pendente t','reaberto')
+
+/*todos os tickests*/
+SELECT * FROM tickets inner join usuarios on usuarios.id = tickets.idCliente inner join clientesEmpresas on usuarios.id = clientesEmpresas.idCliente where clientesEmpresas.idEmpresa =  any(select idEmpresa from clientesEmpresas where idCliente = 5)
+
+
+,case(tickets.status) when '2' then '1' when '3' then '1' when '4' then '1' when '5' then '2' when '6' then '1' when '7' then '3' when '8' then '3' when '9' then '1' else '0' end as 'falsoStatus'
+
+/*
+select tickets.*,statusTickets.descricao as explicacao from tickets 
+inner join statusTickets on tickets.status=statusTickets.id 
+where tickets.idCliente = 5 having explicacao in('novo');
+
+*/
+
+
+=============================================
+servlet
+
+   protected void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+        processRequest(request, response);
+        PrintWriter out = response.getWriter();
+	try {
+		if (new Upload().anexos(request, response)) {
+			out.print("Ficheiro enviado!");
+		} else {
+			out.print("Ficheiro não enviado!");
+		}
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+    }
+	
+class upload
+
+*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package util;
+
+import java.io.File;
+import java.util.Iterator;
+import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.io.FilenameUtils;
+
+/**
+ *
+ * @author vanilson
+ */
+public class Upload {
+
+    public Upload() {
+    }
+
+    
+    public boolean anexos(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+        if (ServletFileUpload.isMultipartContent(request)) {
+
+            int cont = 0;
+
+            ServletFileUpload servletFileUpload = new ServletFileUpload(new DiskFileItemFactory());
+
+            List fileItemsList = null;
+
+            try {
+                fileItemsList = servletFileUpload.parseRequest(request);
+            } catch (FileUploadException e) {
+                e.printStackTrace();
+            }
+
+            String optionalFileName = "";
+            FileItem fileItem = null;
+
+            Iterator it = fileItemsList.iterator();
+
+            do {
+
+                cont++;
+
+                FileItem fileItemTemp = (FileItem) it.next();
+
+                if (fileItemTemp.isFormField()) {
+                    if (fileItemTemp.getFieldName().equals("file")) {
+                        optionalFileName = fileItemTemp.getString();
+                    }
+                } else {
+                    fileItem = fileItemTemp;
+                }
+
+                if (cont != (fileItemsList.size())) {
+                    if (fileItem != null) {
+
+                        String fileName = fileItem.getName();
+                        
+
+                        if (fileItem.getSize() > 0) {
+
+                            if (optionalFileName.trim().equals("")) {
+                                fileName = FilenameUtils.getName(fileName);
+                            } else {
+                                fileName = optionalFileName;
+                            }
+
+                            String dirName = "/P2012-09/web/WEB-INF/imgupload/"; //caminho para o projeto
+
+                            File saveTo = new File(dirName + fileName);
+                            System.out.println("caminho: " + saveTo.toString() );
+                            try {
+                                fileItem.write(saveTo);
+                            } catch (Exception e) {
+                            }
+
+                        }
+                    }
+                }
+            } while (it.hasNext());
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+pgina
+
+ <form action ="../UploadController" name ="frmproduto" method="post" enctype="multipart/form-data">
+                        <legend>Novo produto</legend>
+                        <label for="pais" class="cor-label">Imagem</label>
+                        <input type ="file" name ="arquivo"/>
+                        <input type ="submit" class ="btn btn-primary" value="Registar"/>
+                    </form>
+
+	

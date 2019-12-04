@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Cadastrado</title>
+
+
+<link href="/fapi-poo-web-issuetracker-maven/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="/fapi-poo-web-issuetracker-maven/css/bootstrap-theme.css"
+	rel="stylesheet">
+<link
+	href="/fapi-poo-web-issuetracker-maven/css/elegant-icons-style.css"
+	rel="stylesheet" />
+<link href="/fapi-poo-web-issuetracker-maven/css/font-awesome.min.css"
+	rel="stylesheet" />
+<link href="/fapi-poo-web-issuetracker-maven/css/widgets.css"
+	rel="stylesheet">
+<link href="/fapi-poo-web-issuetracker-maven/css/style-responsive.css"
+	rel="stylesheet" />
+<link href="/fapi-poo-web-issuetracker-maven/css/xcharts.min.css"
+	rel=" stylesheet">
+<link
+	href="/fapi-poo-web-issuetracker-maven/css/jquery-ui-1.10.4.min.css"
+	rel="stylesheet">
+<link href="/fapi-poo-web-issuetracker-maven/css/loginStyle.css"
+	rel="stylesheet">
+
+<script>
+	function home(){
+		top.location = "/fapi-poo-web-issuetracker-maven/CoordenadorServlet?acao=listarSupervisores&descricao=Listou supervisores";
+	}
+	
+	
+</script>
+</head>
+<body background="/fapi-poo-web-issuetracker-maven/img/back.jpg">
+	<div class="alert alert-danger text-center">
+		<strong>ERRO!</strong> Usuario não pode ser excluido
+	</div>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col text-center">
+				<button onclick="home()" class="btn btn-success">Voltar</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

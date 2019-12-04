@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Oct 25 19:13:00 BRST 2019
+grabbag-1.8.1-sources.jar>google-maven-central=
+grabbag-1.8.1.pom>google-maven-central=
+grabbag-1.8.1.jar>google-maven-central=
