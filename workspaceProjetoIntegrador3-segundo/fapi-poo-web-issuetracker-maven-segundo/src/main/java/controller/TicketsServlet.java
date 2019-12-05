@@ -9,14 +9,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import com.mysql.cj.Session;
 
 import business.ticketsBusinessService;
+import model.ResnposeHome;
 import model.Resposta;
 import model.Ticket;
-import model.Usuario;
 import util.GerarDataHora;
 
 /**
@@ -52,16 +49,36 @@ public class TicketsServlet extends HttpServlet {
 		acao = request.getParameter("acao");
 		String nomeUsuario = (String) request.getSession().getAttribute("nome");
 		int idusuario = (int) request.getSession().getAttribute("id");
-		
-		if(nomeUsuario == null) {
+
+		if (nomeUsuario == null) {
 			System.out.println("session expiradaaaaaaaaaaaa  ");
 			request.getRequestDispatcher("/fapi-poo-web-issuetracker-maven/index.jsp").forward(request, response);
-			
-		}else {
+
+		} else {
 			System.out.println("esta ok");
 		}
 
-		if ("listarTodosTickets".equalsIgnoreCase(acao)) {
+		if ("home".equalsIgnoreCase(acao)) {
+			System.out.println("home");
+
+			List<ResnposeHome> responseHomes = ticketsBusinessService.listaHome(idusuario);
+			//List<Resposta> respostas = ticketsBusinessService.listarRespostas();
+			if (responseHomes != null) {
+				for (ResnposeHome res : responseHomes) {
+					System.out.println("id respot " + res.getData());
+				}
+				
+				request.setAttribute("pagina", "Todos os Tickets");
+				//request.setAttribute("respostas", respostas);
+				request.setAttribute("responseHomes", responseHomes);
+				request.getRequestDispatcher("cliente/home.jsp").forward(request, response);
+			} else {
+				// talvez nao seja necessario essa pagina de erro
+				info.add("<strong>ERRO!</strong> buscar dados da home");
+				cor = "alert-danger";
+				paginaInfo = true;
+			}
+		} else if ("listarTodosTickets".equalsIgnoreCase(acao)) {
 			System.out.println("listarTodosTickets");
 
 			List<Ticket> tickets = ticketsBusinessService.listarTodosTickets(idusuario);
@@ -73,8 +90,7 @@ public class TicketsServlet extends HttpServlet {
 				request.setAttribute("pagina", "Todos os Tickets");
 				request.setAttribute("respostas", respostas);
 				request.setAttribute("tickets", tickets);
-				request.getRequestDispatcher("cliente/todosTic.jsp").forward(request,
-						response);
+				request.getRequestDispatcher("cliente/todosTic.jsp").forward(request, response);
 			} else {
 				// talvez nao seja necessario essa pagina de erro
 				info.add("<strong>ERRO!</strong> nao foi possivel acessar todos os tickets");
@@ -89,8 +105,7 @@ public class TicketsServlet extends HttpServlet {
 				request.setAttribute("pagina", "Tickets Resolvidos");
 				request.setAttribute("respostas", respostas);
 				request.setAttribute("tickets", tickets);
-				request.getRequestDispatcher("cliente/todosTic.jsp")
-						.forward(request, response);
+				request.getRequestDispatcher("cliente/todosTic.jsp").forward(request, response);
 			} else {
 				// talcez nao seja necessario essa pagina de erro
 				info.add("<strong>ERRO!</strong> nao foi possivel acessar os tickets resolvidos");
@@ -105,8 +120,7 @@ public class TicketsServlet extends HttpServlet {
 				request.setAttribute("pagina", "Tickets Pendentes");
 				request.setAttribute("respostas", respostas);
 				request.setAttribute("tickets", tickets);
-				request.getRequestDispatcher("cliente/todosTic.jsp")
-						.forward(request, response);
+				request.getRequestDispatcher("cliente/todosTic.jsp").forward(request, response);
 			} else {
 				// talcez nao seja necessario essa pagina de erro
 				info.add("<strong>ERRO!</strong> nao foi possivel acessar os tickets pendentes");
@@ -118,25 +132,25 @@ public class TicketsServlet extends HttpServlet {
 			request.getRequestDispatcher("cliente/home.jsp").forward(request, response);
 		} else if ("novoTicket".equalsIgnoreCase(acao)) {
 
-				Ticket ticket = new Ticket();
-				ticket.setIdCliente(idusuario);
-				ticket.setNomeCliente(nomeUsuario);
-				ticket.setStatus(1);// situacao de ticket/NOVO
-				ticket.setData(gerarDataHora.dataString());
-				ticket.setHora(gerarDataHora.horaString());
+			Ticket ticket = new Ticket();
+			ticket.setIdCliente(idusuario);
+			ticket.setNomeCliente(nomeUsuario);
+			ticket.setStatus(1);// situacao de ticket/NOVO
+			ticket.setData(gerarDataHora.dataString());
+			ticket.setHora(gerarDataHora.horaString());
 
-				int resposta = ticketsBusinessService.criarticket(ticket);
-				
-				if (resposta != 0) {
-					request.setAttribute("idTicket", resposta);
-					request.getRequestDispatcher("cliente/novoTicket.jsp").forward(request, response);
-				} else {
-					info.add("<strong>ERRO!</strong>  Nao foi possivel acessar essa pagina no momento");
-					cor = "alert-danger";
-					request.setAttribute("cor", cor);
-					request.setAttribute("infos", info);
-					request.getRequestDispatcher("paginaInfo/paginaInfo.jsp").forward(request, response);
-				}
+			int resposta = ticketsBusinessService.criarticket(ticket);
+
+			if (resposta != 0) {
+				request.setAttribute("idTicket", resposta);
+				request.getRequestDispatcher("cliente/novoTicket.jsp").forward(request, response);
+			} else {
+				info.add("<strong>ERRO!</strong>  Nao foi possivel acessar essa pagina no momento");
+				cor = "alert-danger";
+				request.setAttribute("cor", cor);
+				request.setAttribute("infos", info);
+				request.getRequestDispatcher("paginaInfo/paginaInfo.jsp").forward(request, response);
+			}
 
 		} else if ("finalizarTicket".equalsIgnoreCase(acao)) {
 			System.out.println("FINALIZAR Tickets");
@@ -149,8 +163,7 @@ public class TicketsServlet extends HttpServlet {
 					request.setAttribute("pagina", "Todos os Tickets");
 					request.setAttribute("respostas", respostas);
 					request.setAttribute("tickets", tickets);
-					request.getRequestDispatcher("cliente/todosTic.jsp").forward(request,
-							response);
+					request.getRequestDispatcher("cliente/todosTic.jsp").forward(request, response);
 				} else {
 					info.add("<strong>ERRO!</strong> FALHA TEMPORARIA!");
 					cor = "alert-danger";
@@ -173,8 +186,7 @@ public class TicketsServlet extends HttpServlet {
 					request.setAttribute("pagina", "Todos os Tickets");
 					request.setAttribute("respostas", respostas);
 					request.setAttribute("tickets", tickets);
-					request.getRequestDispatcher("cliente/todosTic.jsp").forward(request,
-							response);
+					request.getRequestDispatcher("cliente/todosTic.jsp").forward(request, response);
 				} else {
 					// talvez nao seja necessario essa pagina de erro
 					info.add("<strong>ERRO!</strong> FALHA TEMPORARIA!");
@@ -192,7 +204,6 @@ public class TicketsServlet extends HttpServlet {
 			request.setAttribute("infos", info);
 			request.getRequestDispatcher("paginaInfo/paginaInfo.jsp").forward(request, response);
 		}
-		
 
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 
@@ -207,11 +218,18 @@ public class TicketsServlet extends HttpServlet {
 		List<String> info = new ArrayList<String>();
 		// TODO Auto-generated method stub
 		acao = request.getParameter("acao");
+		String nomeUsuario = (String) request.getSession().getAttribute("nome");
+		if (nomeUsuario == null) {
+			System.out.println("session expiradaaaaaaaaaaaa  ");
+			request.getRequestDispatcher("/fapi-poo-web-issuetracker-maven/index.jsp").forward(request, response);
+
+		} else {
+			System.out.println("esta ok");
+		}
 
 		if ("cadastrarTickets".equalsIgnoreCase(acao)) {
 			// System.out.println("Passou pelo cadastro usuario POST");
-			
-	
+
 			String idTicket = request.getParameter("idTicket");
 			String assunto = request.getParameter("assunto");
 			String descricao = request.getParameter("relato");
@@ -221,7 +239,6 @@ public class TicketsServlet extends HttpServlet {
 			System.out.println(idTicket);
 			// LOGICA PROVISORIA PARA VERIFICAR NIVEIS
 
-			
 			if (assunto.equalsIgnoreCase("")) {
 				// pagina de erro
 				paginaInfo = true;
@@ -250,17 +267,16 @@ public class TicketsServlet extends HttpServlet {
 			ticket.setData(gerarDataHora.dataString());
 			ticket.setTempoCriacao(gerarDataHora.TempoCriacaoTickts(ticket.getHora()));
 			ticket.setHora(gerarDataHora.horaString());
-			
+
 			System.out.println("twmpo criacao  -> " + ticket.toString());
-			
+
 			int resposta = ticketsBusinessService.finalizarTicket(ticket);
 			if (resposta == 1) {
 				info.add("<strong>SUCESSO!</strong> Tickets cadastrado com sucesso");
 				cor = "alert-success";
 				request.setAttribute("cor", cor);
 				request.setAttribute("infos", info);
-				request.getRequestDispatcher("paginaInfo/paginaInfo.jsp")
-						.forward(request, response);
+				request.getRequestDispatcher("paginaInfo/paginaInfo.jsp").forward(request, response);
 			} else {
 				info.add("<strong>ERRO!</strong>  Nao foi possivel gerar novo ticket");
 				cor = "alert-danger";
@@ -273,7 +289,7 @@ public class TicketsServlet extends HttpServlet {
 		if ("responderTicket".equalsIgnoreCase(acao)) {
 			System.out.println("responder ticket");
 			int idUsuario = (int) request.getSession().getAttribute("id");
-			String nomeUsuario = (String) request.getSession().getAttribute("nome");
+			nomeUsuario = (String) request.getSession().getAttribute("nome");
 			String nivelUsuario = (String) request.getSession().getAttribute("nivel");
 			Resposta resposta = new Resposta();
 			String respostaUsuario = request.getParameter("resposta");
@@ -301,8 +317,7 @@ public class TicketsServlet extends HttpServlet {
 				request.setAttribute("pagina", "Todos os Tickets");
 				request.setAttribute("respostas", respostas);
 				request.setAttribute("tickets", tickets);
-				request.getRequestDispatcher("cliente/todosTic.jsp").forward(request,
-						response);
+				request.getRequestDispatcher("cliente/todosTic.jsp").forward(request, response);
 			} else {
 				// talcez nao seja necessario essa pagina de erro
 				info.add("<strong>ERRO!</strong> nao foi possivel acessar os tickets");

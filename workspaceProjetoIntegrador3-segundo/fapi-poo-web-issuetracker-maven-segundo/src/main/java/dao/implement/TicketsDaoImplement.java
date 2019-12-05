@@ -10,6 +10,7 @@ import java.util.List;
 
 import connection.MysqlConnection;
 import dao.TicketsDaoInterface;
+import model.ResnposeHome;
 import model.Resposta;
 import model.Ticket;
 
@@ -96,7 +97,7 @@ public class TicketsDaoImplement implements TicketsDaoInterface {
 					+ "else '0' end as 'falsoStatus' FROM tickets "
 					+ "inner join usuarios on usuarios.id = tickets.idCliente "
 					+ "inner join clientesEmpresas on usuarios.id = clientesEmpresas.idCliente "
-					+ "where clientesEmpresas.idEmpresa =  any(select idEmpresa from clientesEmpresas where tickets.idCliente = ?) "
+					+ "where clientesEmpresas.idEmpresa =  any(select idEmpresa from clientesEmpresas where ClientesEmpresas.idCliente = ?) "
 					+ "order by tickets.id desc";
 			java.sql.PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1, idCliente);
@@ -131,6 +132,45 @@ public class TicketsDaoImplement implements TicketsDaoInterface {
 
 	}
 
+	@Override
+	public List<ResnposeHome> listaHome(int idCliente) {
+
+		try (Connection connection = MysqlConnection.abrirConexao()) {
+			String sql 	= "select clientesEmpresas.idEmpresa as 'id_empresa', tickets.data as 'data_t' "
+					+ ",(select count(tickets.id) from tickets where tickets.status = 1 and tickets.data = data_t  and idCliente = any(select idcliente from clientesEmpresas where ClientesEmpresas.idEmpresa = id_empresa)) as 'novo' "
+					+ " ,(select count(tickets.id) from tickets where tickets.status = 8 and tickets.data = data_t and idCliente = any(select idcliente from clientesEmpresas where ClientesEmpresas.idEmpresa = id_empresa)) as 'finalizado' "
+					+ ",(select count(tickets.id) from tickets where tickets.status != 8 and tickets.data = data_t  and idCliente = any(select idcliente from clientesEmpresas where ClientesEmpresas.idEmpresa = id_empresa)) as 'processo' "
+					+ "from tickets"
+					+ " inner join clientesEmpresas on tickets.idCliente = clientesEmpresas.idCliente"
+					+ " where clientesEmpresas.idEmpresa =  any(select idEmpresa "
+					+ "from clientesEmpresas where ClientesEmpresas.idCliente = ?) "
+					+ "group by tickets.data;";
+			java.sql.PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, idCliente);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			List<ResnposeHome> resnposeHome = new ArrayList<ResnposeHome>();
+
+			while (resultSet.next()) {
+				ResnposeHome resHome = new ResnposeHome();
+				resHome.setData(resultSet.getString("data_t"));
+				resHome.setNovo(resultSet.getInt("novo"));
+				resHome.setFinalizado(resultSet.getInt("finalizado"));
+				resHome.setProcesso(resultSet.getInt("processo"));
+				resnposeHome.add(resHome);
+			}
+
+			resultSet.close();
+			preparedStatement.close();
+			
+			return resnposeHome;
+		} catch (SQLException e) {
+			System.out.println("Conexão não estabelecida.");
+			System.out.println(e.getMessage());
+			return null;
+		}
+	}
+	
 	@Override
 	public int adicionarResposta(Resposta resposta) {
 		// TODO Auto-generated method stub
@@ -355,5 +395,6 @@ public class TicketsDaoImplement implements TicketsDaoInterface {
 			return null;
 		}
 	}
+
 
 }

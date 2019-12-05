@@ -101,7 +101,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<ol class="breadcrumb">
-							<li><i class="fa fa-home"></i><a href="/fapi-poo-web-issuetracker-maven/cliente/home.jsp">Home</a></li>
+							<li><i class="fa fa-home"></i><a href="/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=home&Entrou na Home">Home</a></li>
 						</ol>
 					</div>
 				</div>

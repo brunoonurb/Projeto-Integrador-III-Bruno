@@ -4,6 +4,7 @@ import java.util.List;
 
 import dao.TicketsDaoInterface;
 import dao.implement.TicketsDaoImplement;
+import model.ResnposeHome;
 import model.Resposta;
 import model.Ticket;
 
@@ -23,6 +24,12 @@ public class ticketsBusinessService {
 
 		return ticketsDao.listarTodosTickets(idCliente);
 	}
+	
+	public List<ResnposeHome> listaHome(int idCliente){
+
+		return ticketsDao.listaHome(idCliente);
+	}
+	
 
 	public int adicionarResposta(Resposta resposta) {
 
