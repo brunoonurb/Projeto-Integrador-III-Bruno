@@ -5,6 +5,7 @@ import java.util.List;
 import dao.TicketsDaoInterface;
 import dao.implement.TicketsDaoImplement;
 import model.ResnposeHome;
+import model.ResnposeHome2;
 import model.Resposta;
 import model.Ticket;
 
@@ -28,6 +29,11 @@ public class ticketsBusinessService {
 	public List<ResnposeHome> listaHome(int idCliente){
 
 		return ticketsDao.listaHome(idCliente);
+	}
+	
+	public List<ResnposeHome2> listaHome2(int idCliente){
+
+		return ticketsDao.listaHome2(idCliente);
 	}
 	
 

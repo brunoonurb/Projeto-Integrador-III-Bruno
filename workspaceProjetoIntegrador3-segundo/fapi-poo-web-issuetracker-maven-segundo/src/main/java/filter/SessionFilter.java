@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -47,6 +48,7 @@ public class SessionFilter implements Filter {
 
 		HttpServletResponse res = (HttpServletResponse) response;
 
+
 		String url = ((HttpServletRequest) request).getRequestURL().toString();
 		System.out.println(url);
 
@@ -57,6 +59,13 @@ public class SessionFilter implements Filter {
 						System.out.println("\n\n\n\n-----------------" + "\n\n\n NAO esta logado\n------------------");
 
 						res.sendRedirect("http://localhost:8080/fapi-poo-web-issuetracker-maven/");
+						
+							System.out.println("session expiradaaaaaaaaaaaa  ");
+							//((HttpServletResponse) response).sendRedirect("/fapi-poo-web-issuetracker-maven/");
+
+					
+						System.out.println("\n\n\n\n-----------------" + "\n\n\n RETURN ag  passouuuu\n------------------");
+						return;
 
 					} else {
 						System.out.println("\n\n\n\n-----------------" + "\n\n\n esta logado\n------------------");

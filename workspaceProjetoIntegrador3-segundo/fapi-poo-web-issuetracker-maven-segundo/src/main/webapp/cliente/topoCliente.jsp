@@ -57,6 +57,9 @@
     margin: 0;
     padding: 0;
 }
+#teste {
+    height: 650px;
+}
 </style>
 	
 </head>
@@ -68,7 +71,7 @@
 		<!-- |--------------------------------------------------------------------------------------------------------- >
 		Inicia menu superior -->
 		<header class="header dark-bg">
-			<a href="/fapi-poo-web-issuetracker-maven/cliente/home.jsp" class="logo">Issue <span
+			<a href="/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=home&descricao=Entrou na Home" class="logo">Issue <span
 				class="lite">Tracker</span></a>
 			<div class="top-nav notification-row">
 				<ul class="nav pull-right top-menu">
@@ -101,7 +104,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<ol class="breadcrumb">
-							<li><i class="fa fa-home"></i><a href="/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=home&Entrou na Home">Home</a></li>
+							<li><i class="fa fa-home"></i><a href="/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=home&descricao=Entrou na Home">Home</a></li>
 						</ol>
 					</div>
 				</div>
@@ -128,8 +131,8 @@
 								<div class="info-box dark-bg">
 									<i class="fa fa-bars" aria-hidden="true"></i>
 
-									<div class="count">9</div>
-									<div class="title">Todos</div>
+									<div class="count">Todos</div>
+									<div class="title">  Os Tickets</div>
 								</div>
 							</a>
 							<!--/.info-box-->
@@ -139,8 +142,8 @@
 								href="/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=listarTicketsPendentes&descricao=Listou tickets pendentes">
 								<div class="info-box orange-bg">
 									<i class="fa fa-info-circle" aria-hidden="true"></i>
-									<div class="count">6</div>
-									<div class="title">Pendentes</div>
+									<div class="title">  Tickets</div>
+									<div class="count">Pendentes</div>
 								</div>
 							</a>
 							<!--/.info-box-->
@@ -150,8 +153,8 @@
 								href="/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=listarTicketsResolvidos&descricao=Listou tickets resolvidos">
 								<div class="info-box green-bg">
 									<i class="fa fa-thumbs-o-up"></i>
-									<div class="count">6</div>
-									<div class="title">Resolvidos</div>
+									<div class="title">  Tickets</div>
+									<div class="count">Resolvidos</div>
 								</div>
 							</a>
 							<!--/.info-box-->

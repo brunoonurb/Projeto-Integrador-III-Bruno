@@ -10,8 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mysql.cj.util.StringUtils;
+
 import business.ticketsBusinessService;
 import model.ResnposeHome;
+import model.ResnposeHome2;
 import model.Resposta;
 import model.Ticket;
 import util.GerarDataHora;
@@ -47,29 +50,46 @@ public class TicketsServlet extends HttpServlet {
 		List<String> info = new ArrayList<String>();
 		// TODO Auto-generated method stub
 		acao = request.getParameter("acao");
-		String nomeUsuario = (String) request.getSession().getAttribute("nome");
-		int idusuario = (int) request.getSession().getAttribute("id");
-
-		if (nomeUsuario == null) {
-			System.out.println("session expiradaaaaaaaaaaaa  ");
-			request.getRequestDispatcher("/fapi-poo-web-issuetracker-maven/index.jsp").forward(request, response);
-
+		//
+		if  (StringUtils.isNullOrEmpty((String) request.getSession().getAttribute("nome"))) {
+			System.out.println("session expiradaaaaaaaaaaaa index ");
+			response.sendRedirect("index.jsp");
+			//request.getRequestDispatcher("/fapi-poo-web-issuetracker-maven/");
+			return;
 		} else {
 			System.out.println("esta ok");
 		}
+		
+		String nomeUsuario = (String) request.getSession().getAttribute("nome");
+		int idusuario = (int) request.getSession().getAttribute("id");
+		String empresa = "";
+		int t_pen=0;
+		int t_re=0;
+		int todos=0;
+		
+		
+		
 
 		if ("home".equalsIgnoreCase(acao)) {
 			System.out.println("home");
 
 			List<ResnposeHome> responseHomes = ticketsBusinessService.listaHome(idusuario);
-			//List<Resposta> respostas = ticketsBusinessService.listarRespostas();
-			if (responseHomes != null) {
-				for (ResnposeHome res : responseHomes) {
-					System.out.println("id respot " + res.getData());
+			List<ResnposeHome2> responseHomes2 = ticketsBusinessService.listaHome2(idusuario);
+			if (responseHomes2 != null) {
+				for (ResnposeHome2 res2 : responseHomes2) {
+					System.out.println("id respot re " + res2.getT_resolvido());
+					empresa = res2.getNome_empresa(); 
+					t_pen = res2.getT_pendente();
+					t_re = res2.getT_resolvido();
+					todos = res2.getTodos();
 				}
+				request.getSession().setAttribute("empresa", empresa);
+				request.getSession().setAttribute("t_pen", t_pen);
+				request.getSession().setAttribute("t-re", t_re);
+				request.getSession().setAttribute("todos", todos);
 				
-				request.setAttribute("pagina", "Todos os Tickets");
-				//request.setAttribute("respostas", respostas);
+				request.setAttribute("home", "Home");
+				request.setAttribute("responseHomes2", responseHomes2);
 				request.setAttribute("responseHomes", responseHomes);
 				request.getRequestDispatcher("cliente/home.jsp").forward(request, response);
 			} else {
@@ -219,9 +239,9 @@ public class TicketsServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		acao = request.getParameter("acao");
 		String nomeUsuario = (String) request.getSession().getAttribute("nome");
-		if (nomeUsuario == null) {
+		if (StringUtils.isNullOrEmpty(nomeUsuario)) {
 			System.out.println("session expiradaaaaaaaaaaaa  ");
-			request.getRequestDispatcher("/fapi-poo-web-issuetracker-maven/index.jsp").forward(request, response);
+			response.sendRedirect("/fapi-poo-web-issuetracker-maven/index.jsp");
 
 		} else {
 			System.out.println("esta ok");

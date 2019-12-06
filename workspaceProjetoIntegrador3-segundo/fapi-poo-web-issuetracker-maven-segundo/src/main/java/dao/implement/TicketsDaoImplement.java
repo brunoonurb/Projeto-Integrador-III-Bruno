@@ -11,6 +11,7 @@ import java.util.List;
 import connection.MysqlConnection;
 import dao.TicketsDaoInterface;
 import model.ResnposeHome;
+import model.ResnposeHome2;
 import model.Resposta;
 import model.Ticket;
 
@@ -164,6 +165,57 @@ public class TicketsDaoImplement implements TicketsDaoInterface {
 			preparedStatement.close();
 			
 			return resnposeHome;
+		} catch (SQLException e) {
+			System.out.println("Conexão não estabelecida.");
+			System.out.println(e.getMessage());
+			return null;
+		}
+	}
+	
+	@Override
+	public List<ResnposeHome2> listaHome2(int idCliente) {
+
+		try (Connection connection = MysqlConnection.abrirConexao()) {
+			String sql 	= "SELECT empresas.nome as 'nome_Empresa', clientesEmpresas.idCliente as 'id_cliente', clientesEmpresas.idEmpresa as 'id_empresa',tickets.nomeCliente as 'cliente' "
+					+ ",(select count(tickets.id) from tickets where tickets.status = 8 and idCliente = any(select idcliente from clientesEmpresas where ClientesEmpresas.idEmpresa = id_empresa)) as 't_resolvido' "
+					+ ",(select count(tickets.id) from tickets where tickets.status = 1 and idCliente = any(select idcliente from clientesEmpresas where ClientesEmpresas.idEmpresa = id_empresa)) as 't_novo' "
+					+ ",(select count(tickets.id) from tickets where tickets.status > 1 and tickets.status > 7 and idCliente = any(select idcliente from clientesEmpresas where ClientesEmpresas.idEmpresa = id_empresa)) as 't_pendente' "
+					+ ",(select count(tickets.id) from tickets where tickets.status = 9 and idCliente = any(select idcliente from clientesEmpresas where ClientesEmpresas.idEmpresa = id_empresa)) as 't_reaberto' "
+					+ ",(select count(tickets.id) from tickets where tickets.status = 8 and tickets.nomeCliente = cliente and idCliente = any(select idcliente from clientesEmpresas where ClientesEmpresas.idEmpresa = id_empresa)) as 't_finalizado' "
+					+ ",(select count(tickets.id) from tickets where tickets.status != 8 and tickets.nomeCliente = cliente  and idCliente = any(select idcliente from clientesEmpresas where ClientesEmpresas.idEmpresa = id_empresa)) as 't_processo' "
+					+ ",(select count(tickets.id) from tickets where idCliente = any(select idcliente from clientesEmpresas where ClientesEmpresas.idEmpresa = id_empresa)) as 'todos' "
+					+ "FROM tickets "
+					+ "inner join usuarios on usuarios.id = tickets.idCliente "
+					+ "inner join clientesEmpresas on usuarios.id = clientesEmpresas.idCliente "
+					+ "inner join empresas on clientesEmpresas.idEmpresa = empresas.id "
+					+ "where clientesEmpresas.idEmpresa =  any(select idEmpresa from clientesEmpresas where ClientesEmpresas.idCliente = ?) "
+					+ "group by tickets.nomeCliente ";
+			java.sql.PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, idCliente);
+			ResultSet resultSet = preparedStatement.executeQuery();
+
+			List<ResnposeHome2> resnposeHome2 = new ArrayList<ResnposeHome2>();
+
+			while (resultSet.next()) {
+				ResnposeHome2 resHome2 = new ResnposeHome2();
+				resHome2.setNome_empresa(resultSet.getString("nome_empresa"));
+				resHome2.setId_cliente(resultSet.getInt("id_cliente"));
+				resHome2.setId_empresa(resultSet.getInt("id_empresa"));
+				resHome2.setCliente(resultSet.getString("cliente"));
+				resHome2.setT_resolvido(resultSet.getInt("t_resolvido"));
+				resHome2.setT_novo(resultSet.getInt("t_novo"));
+				resHome2.setT_pendente(resultSet.getInt("t_pendente"));
+				resHome2.setT_reaberto(resultSet.getInt("t_reaberto"));
+				resHome2.setT_finalizado(resultSet.getInt("t_finalizado"));
+				resHome2.setT_processo(resultSet.getInt("t_processo"));
+				resHome2.setTodos(resultSet.getInt("todos"));
+				resnposeHome2.add(resHome2);
+			}
+
+			resultSet.close();
+			preparedStatement.close();
+			
+			return resnposeHome2;
 		} catch (SQLException e) {
 			System.out.println("Conexão não estabelecida.");
 			System.out.println(e.getMessage());

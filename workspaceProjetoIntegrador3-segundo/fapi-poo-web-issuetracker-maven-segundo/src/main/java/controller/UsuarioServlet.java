@@ -136,10 +136,17 @@ public class UsuarioServlet extends HttpServlet {
 					session.setAttribute("nome", usuario.getNome());
 					session.setAttribute("sobrenome", usuario.getSobrenome());
 					session.setAttribute("id", usuario.getId());
+					session.setAttribute("empresa", "");
+					session.setAttribute("t_re", "0");
+					session.setAttribute("t_pen", "0");
+					session.setAttribute("todos", "0");
+					
 
 					if (usuario.getStatus() == 99) {
 						response.sendRedirect("/fapi-poo-web-issuetracker-maven/usuario/alteracaoSenha.jsp");
-					} else {
+					} else if(usuario.getNivel().equals("cliente")){
+						response.sendRedirect("/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=home&descricao=Entrou na Home");
+					}else {
 						response.sendRedirect("/fapi-poo-web-issuetracker-maven/" + usuario.getNivel() + "/home.jsp");
 					}
 

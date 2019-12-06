@@ -13,19 +13,13 @@
 		<!---bruno------------------>
 		<div class="container">
 			<h3>
-				<i class="fa fa-bars" aria-hidden="true"></i> Home
+				<i class="fa fa-bars" aria-hidden="true"></i> Relatorio geral da Empresa ${sessionScope.empresa}.
 			</h3>
-			<h4>Relatorio geral da empresa</h4>
+			</br>
 			<div class="row col-md-12">
-				oiiii
-				<c:forEach items="${responseHomes}" var="reshome">
-					<c:out value="${reshome.data}" /> oo
-		
-		</c:forEach>
 				<div id="container1"></div>
-				</br>
-
 			</div>
+			</br>
 			<div class="row">
 				<div class="col-md-6">
 					<div id="container2"></div>
@@ -43,6 +37,8 @@
 
 
 	<script>
+	var empresa = "<c:out value='${sessionScope.empresa}'/>";
+	
 		anychart
 				.onDocumentReady(function() {
 					// set chart theme
@@ -83,7 +79,7 @@
 
 					// set chart title text settings
 					chart
-							.title('Funcionarios da empresa e situacao dos tickets');
+							.title('Funcionarios da empresa ' + empresa +' e situacao dos tickets');
 
 					chart.interactivity().hoverMode('by-x');
 					chart
@@ -131,13 +127,39 @@
 
 		var vetores = [];
 
-		var nome = 'lami';
-		var n = 5;
+		var nome = 'erro';
+		var t_processo,t_finalizado,t_resolvido,t_pendente,t_novo,t_reaberto;
+		var i = 0;
 
-		for (var i = 1; i <= 5; i++) {
+		</script>
+
+
+
+		<c:forEach items="${responseHomes2}" var="reshome2">
+			<script>
+			nome = "<c:out value='${reshome2.cliente}'/>";
+			t_processo = "<c:out value='${reshome2.t_processo}'/>";
+			t_finalizado = "<c:out value='${reshome2.t_finalizado}'/>";
+			t_resolvido = "<c:out value='${reshome2.t_resolvido}'/>";
+			t_pendente = "<c:out value='${reshome2.t_pendente}'/>";
+			t_novo = "<c:out value='${reshome2.t_novo}'/>";
+			t_reaberto = "<c:out value='${reshome2.t_reaberto}'/>";
+		
+			
+			vetores[i] = [ nome, t_processo, -t_finalizado ];
+			i ++;
+			
+			</script>
+
+		</c:forEach>
+
+		<script>
+		
+		
+		/* for (var i = 1; i <= 5; i++) {
 
 			vetores[i] = [ i + nome, n, -i + 40 ];
-		}
+		} */
 		console.log('local');
 		console.log(vetores);
 
@@ -270,18 +292,21 @@
 		/*=========== outro ==================================================================================================*/
 		anychart.onDocumentReady(function() {
 			// set chart theme
-			var novo = 10;
-			var pendente = 10;
-			var resolvido = 10;
-			var reaberto = 10;
+			/*
+			t_resolvido ;
+			t_pendente ;
+			t_novo ;
+			t_reaberto ;*/
+		
 			anychart.theme('pastel');
 			// create pie chart with passed data
-			var chart = anychart.pie3d([ [ 'Novo', novo ], [ '', ],
-					[ 'Resolvido', resolvido ], [ '', ],
-					[ 'Pendente', pendente ], [ 'Reaberto', reaberto ] ]);
+			var chart = anychart.pie3d([ [ 'Novo', t_novo ], [ '', ],
+					[ 'Resolvido', t_resolvido ], [ '', ],
+					[ 'Pendente', t_pendente ],
+					[ 'Reaberto', t_reaberto ] ]);
 
 			// set chart title text settings
-			chart.title('Todos os tickets da empresa(Friboi)')
+			chart.title('Todos os tickets da empresa(' + empresa +')')
 			//set chart radius
 			.radius('75%')
 			// create empty area in pie chart
