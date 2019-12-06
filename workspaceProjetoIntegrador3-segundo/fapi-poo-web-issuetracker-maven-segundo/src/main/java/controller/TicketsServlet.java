@@ -169,7 +169,7 @@ public class TicketsServlet extends HttpServlet {
 				cor = "alert-danger";
 				request.setAttribute("cor", cor);
 				request.setAttribute("infos", info);
-				request.getRequestDispatcher("paginaInfo/paginaInfo.jsp").forward(request, response);
+				request.getRequestDispatcher("cliente/paginaInfo.jsp").forward(request, response);
 			}
 
 		} else if ("finalizarTicket".equalsIgnoreCase(acao)) {
@@ -222,7 +222,7 @@ public class TicketsServlet extends HttpServlet {
 		if (paginaInfo) {
 			request.setAttribute("cor", cor);
 			request.setAttribute("infos", info);
-			request.getRequestDispatcher("paginaInfo/paginaInfo.jsp").forward(request, response);
+			request.getRequestDispatcher("cliente/paginaInfo.jsp").forward(request, response);
 		}
 
 		response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -242,7 +242,7 @@ public class TicketsServlet extends HttpServlet {
 		if (StringUtils.isNullOrEmpty(nomeUsuario)) {
 			System.out.println("session expiradaaaaaaaaaaaa  ");
 			response.sendRedirect("/fapi-poo-web-issuetracker-maven/index.jsp");
-
+			return;
 		} else {
 			System.out.println("esta ok");
 		}
@@ -276,7 +276,7 @@ public class TicketsServlet extends HttpServlet {
 				cor = "alert-danger";
 				request.setAttribute("cor", cor);
 				request.setAttribute("infos", info);
-				request.getRequestDispatcher("paginaInfo/paginaInfo.jsp").forward(request, response);
+				request.getRequestDispatcher("cliente/paginaInfo.jsp").forward(request, response);
 			}
 			Ticket ticket = ticketsBusinessService.buscarTicket(Integer.parseInt(idTicket));
 			System.out.println("\nservelet \n " + ticket.toString());
@@ -296,13 +296,13 @@ public class TicketsServlet extends HttpServlet {
 				cor = "alert-success";
 				request.setAttribute("cor", cor);
 				request.setAttribute("infos", info);
-				request.getRequestDispatcher("paginaInfo/paginaInfo.jsp").forward(request, response);
+				request.getRequestDispatcher("cliente/paginaInfo.jsp").forward(request, response);
 			} else {
 				info.add("<strong>ERRO!</strong>  Nao foi possivel gerar novo ticket");
 				cor = "alert-danger";
 				request.setAttribute("cor", cor);
 				request.setAttribute("infos", info);
-				request.getRequestDispatcher("paginaInfo/paginaInfo.jsp").forward(request, response);
+				request.getRequestDispatcher("cliente/paginaInfo.jsp").forward(request, response);
 			}
 
 		}
@@ -329,7 +329,7 @@ public class TicketsServlet extends HttpServlet {
 				cor = "alert-danger";
 				request.setAttribute("cor", cor);
 				request.setAttribute("infos", info);
-				request.getRequestDispatcher("paginaInfo/paginaInfo.jsp").forward(request, response);
+				request.getRequestDispatcher("cliente/paginaInfo.jsp").forward(request, response);
 			}
 			List<Ticket> tickets = ticketsBusinessService.listarTodosTickets(idUsuario);
 			List<Resposta> respostas = ticketsBusinessService.listarRespostas();
@@ -344,7 +344,7 @@ public class TicketsServlet extends HttpServlet {
 				cor = "alert-danger";
 				request.setAttribute("cor", cor);
 				request.setAttribute("infos", info);
-				request.getRequestDispatcher("paginaInfo/paginaInfo.jsp").forward(request, response);
+				request.getRequestDispatcher("cliente/paginaInfo.jsp").forward(request, response);
 			}
 		}
 

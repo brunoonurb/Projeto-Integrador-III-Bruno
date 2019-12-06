@@ -17,7 +17,7 @@ import model.LogAcesso;
 /**
  * Servlet implementation class LogServlet
  */
-@WebServlet("/HomeLogServlet")
+@WebServlet("/LogServlet")
 public class LogServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private LogBusinessService logBusinessService = new LogBusinessService();

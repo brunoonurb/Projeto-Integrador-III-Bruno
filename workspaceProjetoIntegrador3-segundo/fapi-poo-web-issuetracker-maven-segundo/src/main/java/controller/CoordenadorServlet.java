@@ -20,7 +20,7 @@ import util.GerarDataHora;
 /**
  * Servlet implementation class CoordenadorServlet
  */
-@WebServlet("/HomeCoordenadorServlet")
+@WebServlet("/CoordenadorServlet")
 public class CoordenadorServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private CoordenadorBusinessService coordenadorBusinessService = new CoordenadorBusinessService();

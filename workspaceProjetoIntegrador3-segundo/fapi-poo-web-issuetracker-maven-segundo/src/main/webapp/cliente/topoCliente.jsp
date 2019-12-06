@@ -153,7 +153,7 @@
 								href="/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=listarTicketsResolvidos&descricao=Listou tickets resolvidos">
 								<div class="info-box green-bg">
 									<i class="fa fa-thumbs-o-up"></i>
-									<div class="title">  Tickets</div>
+									<div class="title">os Tickets</div>
 									<div class="count">Resolvidos</div>
 								</div>
 							</a>
