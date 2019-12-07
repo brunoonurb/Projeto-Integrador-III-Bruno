@@ -134,6 +134,7 @@ public class UsuarioServlet extends HttpServlet {
 					session.setMaxInactiveInterval(20 * 60);
 					session.setAttribute("nivel", usuario.getNivel());
 					session.setAttribute("nome", usuario.getNome());
+					session.setAttribute("email", usuario.getEmail());
 					session.setAttribute("sobrenome", usuario.getSobrenome());
 					session.setAttribute("id", usuario.getId());
 					session.setAttribute("empresa", "");

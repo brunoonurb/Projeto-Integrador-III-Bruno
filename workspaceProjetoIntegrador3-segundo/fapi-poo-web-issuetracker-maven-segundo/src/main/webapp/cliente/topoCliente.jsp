@@ -84,8 +84,7 @@
 					</a>
 						<ul class="dropdown-menu extended logout">
 							<div class="log-arrow-up"></div>
-							<li class="eborder-top"><a href="#"><i
-									class="icon_profile"></i> Meu perfil</a></li>
+							
 							<li><a href="/fapi-poo-web-issuetracker-maven/LogoutServlet"><i class="icon_key_alt"></i> Sair</a></li>
 						</ul></li>
 				</ul>
