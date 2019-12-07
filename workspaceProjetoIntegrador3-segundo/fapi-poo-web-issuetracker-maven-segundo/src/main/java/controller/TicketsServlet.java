@@ -105,7 +105,7 @@ public class TicketsServlet extends HttpServlet {
 			List<Resposta> respostas = ticketsBusinessService.listarRespostas();
 			if (tickets != null) {
 				for (Resposta resposta : respostas) {
-					System.out.println("id respot " + resposta.getIdTicket());
+					System.out.println("id tickst " + resposta.getIdTicket());
 				}
 				request.setAttribute("pagina", "Todos os Tickets");
 				request.setAttribute("respostas", respostas);
@@ -118,10 +118,14 @@ public class TicketsServlet extends HttpServlet {
 				paginaInfo = true;
 			}
 		} else if ("listarTicketsResolvidos".equalsIgnoreCase(acao)) {
-			System.out.println("listarTodosTickets");
+			System.out.println("listarTickets Resolvidos");
 			List<Ticket> tickets = ticketsBusinessService.listarTicketsResolvidos(idusuario);
 			List<Resposta> respostas = ticketsBusinessService.listarRespostas();
 			if (tickets != null) {
+				for (Ticket ticket : tickets) {
+					System.out.println("id tickst resolvidos " + ticket.getId());
+				}
+				
 				request.setAttribute("pagina", "Tickets Resolvidos");
 				request.setAttribute("respostas", respostas);
 				request.setAttribute("tickets", tickets);

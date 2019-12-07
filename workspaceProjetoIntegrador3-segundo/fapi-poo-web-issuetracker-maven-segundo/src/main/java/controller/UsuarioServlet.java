@@ -64,7 +64,7 @@ public class UsuarioServlet extends HttpServlet {
 				cor = "alert-success";
 				request.setAttribute("cor", cor);
 				request.setAttribute("infos", info);
-				request.getRequestDispatcher("paginaInfo/paginaInfo.jsp").forward(request, response);
+				request.getRequestDispatcher("cliente/paginaInfo.jsp").forward(request, response);
 			} else {
 				info.add("<strong>ERRO!</strong> Não foi possivel alterar senha");
 				cor = "alert-danger";

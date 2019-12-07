@@ -39,12 +39,9 @@
 										<td class="col-md-2" data-toggle="collapse"
 											data-parent="#accordion"
 											data-target="#<c:out value="${ticket.id}"/>"><c:if
-												test="${ticket.status == 1}">
+												test="${ticket.status != 3}">
 												<span class="badge bg-warning m-0"> Pendente
-											</c:if> <c:if test="${ticket.status == 2}">
-												<span class="badge bg-info m-0"> Pendente Respotas /
-													base ->${ticket.status} 
-											</c:if> <c:if test="${ticket.status == 3}">
+											</c:if>  <c:if test="${ticket.status == 3}">
 												<span class="badge bg-success m-0"> Resolvido 
 											</c:if> </span></td>
 										<td class="col-md-4" data-toggle="collapse"
