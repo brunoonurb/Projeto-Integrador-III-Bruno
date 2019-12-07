@@ -58,7 +58,7 @@
     padding: 0;
 }
 #teste {
-    height: 650px;
+    height: 750px;
 }
 </style>
 	
@@ -98,8 +98,6 @@
 
 		<section id="main">
 			<section class="wrapper">
-
-
 				<!-- |-------------------------------------------------------------------------------------------------------- >  Inicia menu principal -->
 				<div class="row">
 					<div class="col-lg-12">

@@ -40,7 +40,7 @@
 						<i class="fa fa-envelope"> </i> <label for="nome">Email</label> <input
 							type="text" class="form-control" id="nome"
 							aria-describedby="nomeHelp"
-							value="${sessionScope.usuario.email }" disabled> <small
+							value="${sessionScope.email }" disabled> <small
 							id="nomeHelp" class="form-text text-muted">Email do
 							usuario logado no momenmto.</small>
 					</div>

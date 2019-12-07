@@ -40,30 +40,123 @@
 											data-parent="#accordion"
 											data-target="#<c:out value="${ticket.id}"/>"><c:if
 												test="${ticket.status == 1}">
-												<span class="badge bg-warning m-0"> Pendente / base
-													->${ticket.status} 
+												<span class="badge bg-warning m-0"> Pendente
 											</c:if> <c:if test="${ticket.status == 2}">
 												<span class="badge bg-info m-0"> Pendente Respotas /
 													base ->${ticket.status} 
 											</c:if> <c:if test="${ticket.status == 3}">
-												<span class="badge bg-success m-0"> Resolvido / base
-													->${ticket.status} 
+												<span class="badge bg-success m-0"> Resolvido 
 											</c:if> </span></td>
 										<td class="col-md-4" data-toggle="collapse"
 											data-parent="#accordion"
 											data-target="#<c:out value="${ticket.id}"/>">
 											${ticket.assunto}</td>
-										<td class="col-md-2"><c:if test="${ticket.status != 3}">
-												<a class="btn btn-success"
-													href="/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=finalizarTicket&idTicket=${ticket.id }">Finalizar</a>
-											</c:if> <c:if test="${ticket.status == 3}">
-												<a class="btn btn-danger"
-													href="/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=reabrirTicket&idTicket=${ticket.id }">Reabrir</a>
+										<td class="col-md-2"><c:if
+												test="${ticket.idCliente == sessionScope.id}">
+												<c:set var="nameCliente_t" value="${ticket.nomeCliente}" />
+												<c:if test="${ticket.status != 3}">
+													<c:set var="situacao" value="Finalizado" />
+													<button class="btn btn-success" data-toggle="modal"
+														data-target="#modalBotton<c:out value="${ticket.id}"/>">Finalizar</button>
+													<!--<a class="btn btn-success" onclick="modalBotton2()"
+														href="/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=finalizarTicket&idTicket=${ticket.id }">Finalizar</a>-->
+												</c:if>
+												<c:if test="${ticket.status == 3}">
+													<c:set var="situacao" value="Reaberto" />
+													<button class="btn btn-danger" data-toggle="modal"
+														data-target="#modalBotton2<c:out value="${ticket.id}"/>">Reabrir</button>
+													<!--<a class="btn btn-danger" onclick="modalBotton2()"
+														href="/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=reabrirTicket&idTicket=${ticket.id }">Reabrir</a>-->
+												</c:if>
+											</c:if> <c:if test="${ticket.idCliente != sessionScope.id}">
+												<c:set var="nameCliente_t" value="${ticket.nomeCliente}" />
+												<c:if test="${ticket.status != 3}">
+													<button class="btn btn-success" onclick="modalBotton()">Finalizar</button>
+												</c:if>
+												<c:if test="${ticket.status == 3}">
+													<button class="btn btn-danger" onclick="modalBotton()">Reabrir</button>
+												</c:if>
 											</c:if></td>
 									</tr>
 								</table>
 							</h6>
 						</div>
+
+						<div class="modal fade"
+							id="modalBotton<c:out value="${ticket.id}"/>" role="dialog">
+							<div class="modal-dialog"
+								style="background-color: SpringGreen; color: black;">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">
+											<b>Alterar situacao do tickets</b>
+										</h4>
+									</div>
+									<div class="modal-body">
+										<h4>
+											<b> <c:out value="${nameCliente_t}" /> seu tickets sera
+												<c:out value="${situacao}" />.
+											</b>
+										</h4>
+									</div>
+									<div class="modal-footer">
+										<div class="row">
+											<div class="col-md-3"></div>
+											<div class="col-md-3">
+												<button type="button" class="btn btn-primary"
+													data-dismiss="modal">Fechar</button>
+											</div>
+											<div class="col-md-3">
+												<a class="btn btn-success"
+													href="/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=finalizarTicket&idTicket=${ticket.id }">Finalizar</a>
+											</div>
+											<div class="col-md-3"></div>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="modal fade"
+							id="modalBotton2<c:out value="${ticket.id}"/>" role="dialog">
+							<div class="modal-dialog"
+								style="background-color: SpringGreen; color: black;">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">
+											<b>Alterar situacao do tickets</b>
+										</h4>
+									</div>
+									<div class="modal-body">
+										<h4>
+											<b> <c:out value="${nameCliente_t}" /> seu tickets sera
+												<c:out value="${situacao}" />.
+											</b>
+										</h4>
+									</div>
+									<div class="modal-footer">
+										<div class="row">
+											<div class="col-md-3"></div>
+											<div class="col-md-3">
+												<button type="button" class="btn btn-primary"
+													data-dismiss="modal">Fechar</button>
+											</div>
+											<div class="col-md-3">
+												<a class="btn btn-danger" onclick="modalBotton2()"
+													href="/fapi-poo-web-issuetracker-maven/TicketsServlet?acao=reabrirTicket&idTicket=${ticket.id }">Reabrir</a>
+											</div>
+											<div class="col-md-3"></div>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+
 						<div id="<c:out value="${ticket.id}"/>"
 							class="panel-collapse collapse">
 							<div class="panel-body">
@@ -134,15 +227,48 @@
 
 		</div>
 	</div>
-	</section>
-	</section>
-	</section>
-	</body>
-	</html>
-	<script>
-	function focusResposta(var idTicket){
+
+</div>
+
+<script>
+	/* function focusResposta(var idTicket){
 		alert("focus")
 		document.getElementById('form'+idTicket').focus
+	} */
+	function modalBotton(){
+		//alert('ooo');
+		 $('#modalBotton').modal('show');
 	}
-
 </script>
+
+
+<div class="modal fade" id="modalBotton" role="dialog">
+	<div class="modal-dialog"
+		style="background-color: tomato; color: black;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">
+					<b>Alterar situacao do tickets</b>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<h4>
+					<b>Esse ticket não pode ser alterado pois pertence a outro
+						funcionario. </b>
+				</h4>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+</section>
+</section>
+</section>
+</body>
+</html>
