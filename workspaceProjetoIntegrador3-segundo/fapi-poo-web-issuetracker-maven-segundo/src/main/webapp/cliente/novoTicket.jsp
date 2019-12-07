@@ -64,7 +64,7 @@
 					</div>
 				</div>
 				<br>
-				<div class="row d-flex justify-content-center">
+				<!-- <div class="row d-flex justify-content-center">
 					<div class="form-group col-md-12">
 						<i class="fa fa-comments-o"> </i> <label for="exampleTextarea">Adicionar
 							Print do problema</label>
@@ -75,7 +75,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<br />
 
 				<button type="submit" class="btn btn-primary">Gerar Ticket</button>
